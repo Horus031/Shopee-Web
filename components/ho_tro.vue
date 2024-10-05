@@ -1,6 +1,6 @@
 <template>
     <v-sheet>
-        <p>aadahfbewh</p>
+        <p></p>
         <v-card>
 
         </v-card>
@@ -9,7 +9,7 @@
         <div>
             <v-card>
                 <v-card-title>
-                    <
+                    asndaondw
                 </v-card-title>
             </v-card>
         </div>        
