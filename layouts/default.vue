@@ -1,13 +1,6 @@
 <template>
-
+<hotro></hotro> 
 </template>
 
 <script>
-export default {
-  name: '',
-  data () {
-    return {
-    } 
-    }
-}
 </script>
