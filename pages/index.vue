@@ -422,6 +422,756 @@
                         <p class="mt-2"> </p>
                         <p class="my-2"> </p>
                     </div>
+                    <div class="mt-15 mb-8">
+                        <div class="subtitle-2">CÓ THỂ BẠN ĐANG TÌM KIẾM</div>
+
+                        <div class="caption mt-2">
+                            <span >
+                                <span v-for="(find, index) in findList" :key="index">
+                                    <a href="" class="black--text">{{ find.name }}</a>
+                                    <template v-if="index < brands.length - 1"> | </template>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </v-sheet>
+
+                <v-divider></v-divider>
+
+                <v-sheet class="mt-15 mb-8 pb-15">
+
+                    <div class="subtitle-2 grey--text lighten-3">Danh Mục</div>
+
+                    <div class="row" style="margin: -10px -5px 0 -5px;">
+                        <div class="grid-column-2-4 pa-1">
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-column-2-4 pa-1">
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-column-2-4 pa-1">
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-column-2-4 pa-1">
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-column-2-4 pa-1">
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-wrapper"> 
+                                <div>
+                                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                                        <a href="" class="caption text-decoration-none black--text font-weight-bold grey--text lighten-3">THỜI TRANG NAM</a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap mb-2">
+                                    <div class="caption">
+                                        <span >
+                                            <span v-for="(find, index) in findList" :key="index">
+                                                <a href="" class="black--text">{{ find.name }}</a>
+                                                <template v-if="index < brands.length - 1"> | </template>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </v-sheet>
+
+            </div>
+        </v-footer>
+
+        <v-footer color="grey lighten-5">
+            <div class="grid">
+                <v-sheet class="row" color="transparent" style="margin: -10px -5px 0 -5px;">
+                    <div class="grid-column-2-4 pa-1">
+                        <div class="mt-10 mb-5 caption font-weight-bold">
+                            CHĂM SÓC KHÁCH HÀNG
+                        </div>
+
+                        <v-list color="transparent" class="pa-0 mt-n4"> 
+                            <v-list-item class="pa-0 d-flex flex-column align-start">
+                                <v-list-item-content class="pt-4">
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Trung tâm trợ giúp</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Shopee Blog</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Shopee Mall</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Hướng dẫn mua hàng</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Hướng dẫn bán hàng</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Thanh toán</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Shopee Xu</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Vận chuyển</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Trả hàng & Hoàn tiền</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Liên hệ Shopee</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Chính sách bảo hành</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+                    </div>
+                    <div class="grid-column-2-4 pa-1">
+                        <div class="mt-10 mb-5 caption font-weight-bold">
+                            VỀ SHOPEE
+                        </div>
+
+                        <v-list color="transparent" class="pa-0 mt-n4"> 
+                            <v-list-item class="pa-0 d-flex flex-column align-start">
+                                <v-list-item-content class="pt-4">
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Giới thiệu về Shopee Việt Nam</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Tuyển dụng</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Điều Khoản Shopee</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Chính sách bảo mật</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Chính Hãng</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Kênh Người bán</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Flash Sales</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Chương trình Tiếp thị liên kết Shopee</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                                <v-list-item-content>
+                                    <v-list-item-title class="caption">
+                                        <a href="" class="text-decoration-none grey--text darken-2">Liên Hệ Với Truyền Thông</a>
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+                    
+                    </div>
+                    <div class="grid-column-2-4 pa-1">
+                        <div class="mt-10 mb-5 caption font-weight-bold">
+                            THANH TOÁN
+                        </div>
+
+                        <v-list color="transparent" class="pa-0 mt-n4">
+                            <v-list-item class="pa-0 pt-2">
+                                <v-list-item-content class="footer__list--payment">
+                                    <v-img
+                                        :src="require('@/assets/img/visa-payment.png')"
+                                        height="30px" 
+                                        max-width="60px" 
+                                        contain 
+                                        position="center center"
+                                        width="fit-content"
+                                    >
+                                    </v-img>
+                                </v-list-item-content>
+                                <v-list-item-content class="footer__list--payment">
+                                    <v-img
+                                        :src="require('@/assets/img/visa-payment.png')"
+                                        height="30px" 
+                                        max-width="60px" 
+                                        contain 
+                                        position="center center"
+                                        width="fit-content"
+                                    >
+                                    </v-img>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+                        
+                    </div>
+                    <div class="grid-column-2-4 pa-1">
+                        <div class="mt-10 mb-5 caption font-weight-bold">
+                            THEO DÕI CHÚNG TÔI TRÊN
+                        </div>
+
+                    </div>
+                    <div class="grid-column-2-4 pa-1">
+                        <div class="mt-10 mb-5 caption font-weight-bold">
+                            TẢI ỨNG DỤNG SHOPEE NGAY THÔI
+                        </div>
+
+                    </div>
+                </v-sheet>
+
+                <v-sheet>
+            
                 </v-sheet>
             </div>
         </v-footer>
@@ -526,6 +1276,39 @@
                 { name: 'chữ hỷ' },
                 { name: 'giấy dán tường' },
                 { name: 'starbucks' },
+            ],
+            findList: [
+                {  name: 'keycap' },
+                {  name: 'máy hút chân không' },
+                {  name: 'chân gà' },
+                {  name: 'bàn ghế sofa phòng khách' },
+                {  name: 'kệ sách' },
+                {  name: 'tủ lạnh 2 cánh' },
+                {  name: 'bàn phím cơ' },
+                {  name: 'keycap' },
+                {  name: 'ô tô' },
+                {  name: 'mặt nạ ronaldo' },
+                {  name: 'popmart' },
+                {  name: 'webcam' },
+                {  name: 'ghế tình yêu' },
+                {  name: 'bình giữ nhiệt' },
+                {  name: 'socola mrbeast' },
+                {  name: 'tai nghe bluetooth' },
+                {  name: 'tranh tô màu' },
+                {  name: 'tủ lạnh mini' },
+                {  name: 'ốp lưng iphone 15 promax' },
+                {  name: 'labubu gấu bông' },
+                {  name: 'Lab Nature' },
+                {  name: 'Lip On Lip' },
+                {  name: 'Marico' },
+                {  name: 'HnB' },
+                {  name: 'COCO SHOP BEAUTY & COSMETIC' },
+                {  name: '3kzidjslaz' },
+                {  name: 'Bea-Tech Official Store' },
+                {  name: 'Dr. Bei Vietnam' },
+                {  name: 'Duku Shop' },
+                {  name: 'Bag for Kids' },
+
             ]
         }
     }
@@ -533,12 +1316,6 @@
 </script>
 
 <style scoped>
-
-:root {
-    --navbar-height: 34px;
-    --header-height: 120px;
-    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
-}
 
 * {
     box-sizing: inherit;
@@ -550,12 +1327,22 @@
     margin: 0 auto;
 }
 
+.grid-column-2-4 {
+    width: 20%;
+}
+
 .v-list-item__title, .v-list-item__subtitle {
     overflow: visible !important;
 }
 
 .v-list-item__content {
     flex: none;
+    align-self: normal;
+    padding: 6px 0;
+}
+
+.item-first {
+    padding-top: 16px;
 }
 
 .header__navbar-item--separator::after {
@@ -576,6 +1363,20 @@
 
 ::v-deep .v-input__control {
     height: 40px !important;
+}
+
+.footer__list--payment {
+    padding: 0 4px; 
+    max-width: 60px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-align: center;
+    flex-basis: 33%;
+    background-size: contain;
+    margin: 0 8px 8px 0;
+    overflow: hidden;
 }
 
 
