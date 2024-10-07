@@ -1,7 +1,9 @@
 <template>
     <v-app light>
+        <!-- Header Navbar Wrapper-->
         <header class="header" style="height: 120px; background-image: linear-gradient(-180deg, #f53d2d, #f63); position: fixed; top:0; left:0; bottom:0; right:0; z-index:1;">
             <div class="grid">
+                <!-- Navbar -->
                 <nav class="header__navbar d-flex justify-space-between" style="height:34px">
                     <v-list style="background-color: transparent;" class="pa-0">
                         <v-list-item class="pa-0 mt-n2" >
@@ -156,7 +158,7 @@
                         </v-list-item>
                     </v-list>
                 </nav>
-
+                <!-- Header with search -->
                 <v-sheet style="height: 86px" color="transparent">
                     <div class="pt-3 pb-2 d-flex">
                         <a href="" class="pr-10">
@@ -211,6 +213,7 @@
             </div>
         </header>
 
+        <!-- Products Body -->
         <v-sheet color="white" style="margin-top: 120px">
             <div class="grid">
                 <h1 class="text-center">Product Body</h1>
@@ -218,11 +221,12 @@
             </div>
         </v-sheet>
 
-
+        <!-- Footer -->
         <v-footer color="white" style="border-top: 4px solid #ee4d2d !important;">
             <div class="grid">
                 <v-sheet class="mt-15 pb-8">
                     <div>
+                        <!-- Footer Content -->
                         <div class="subtitle-2">SHOPEE - GÌ CŨNG CÓ, MUA HẾT Ở SHOPEE</div>
 
                         <div class="caption mt-2" style="line-height: 1.4;">
@@ -427,8 +431,8 @@
 <script>
   export default {
     data() {
-        return {
-            brands: [
+        return { // Variables
+            brands: [ 
                 { name: 'Philips' },
                 { name: 'Deerma' },
                 { name: 'L`Oréal' },
