@@ -2,9 +2,8 @@
   <v-app>
 
     <v-main>
+      <Header />
       <Nuxt />
-      <tutorial />
-      <!-- <Ngu /> -->
 
     </v-main>
 
@@ -21,3 +20,4 @@ export default {
   }
 }
 </script>
+<style scoped></style>
