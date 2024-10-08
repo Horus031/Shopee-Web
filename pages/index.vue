@@ -123,21 +123,72 @@
                         </v-list-item>
                     </v-list>
 
-                    <v-list style="background-color: transparent;" class="pa-0">
+                    <v-list color="transparent" class="pa-0">
                         <v-list-item class="pa-0 mt-n2" >
-                            <v-list-item-content class="pa-0 ">
-                                <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center pa-2">
+                            <v-list-item-content class="pa-0">
+                                <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center ">
                                     <v-hover v-slot="{ hover }">
-                                        <a 
-                                            href="" 
-                                            class="text-decoration-none white--text d-flex align-center" 
-                                            style="font-size: 14px;"
-                                            :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
+                                        <v-menu
+                                            transition="scale-transition"
+                                            origin="top right"
+                                            open-on-hover
+                                            bottom
+                                            left
+                                            offset-y
                                         >
-                                            <svg style="width: 18px; height: 18px;" viewBox="3 2.5 14 14" x="0" y="0" class="shopee-svg-icon icon-help-center pr-1"><path d="m17 15.6-.6-1.2-.6-1.2v-7.3c0-.2 0-.4-.1-.6-.3-1.2-1.4-2.2-2.7-2.2h-1c-.3-.7-1.1-1.2-2.1-1.2s-1.8.5-2.1 1.3h-.8c-1.5 0-2.8 1.2-2.8 2.7v7.2l-1.2 2.5-.2.4h14.4zm-12.2-.8.1-.2.5-1v-.1-7.6c0-.8.7-1.5 1.5-1.5h6.1c.8 0 1.5.7 1.5 1.5v7.5.1l.6 1.2h-10.3z"></path><path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path></svg>  
-                                        
-                                            <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Thông báo</span>
-                                        </a>
+
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <a 
+                                                    href="" 
+                                                    class="text-decoration-none white--text d-flex align-center pa-2"
+                                                    style="font-size: 14px;"
+                                                    :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
+                                                    v-bind="attrs"
+                                                    v-on="on"
+                                                >
+                                                    <svg style="width: 18px; height: 18px;" viewBox="3 2.5 14 14" x="0" y="0" class="shopee-svg-icon icon-help-center pr-1"><path d="m17 15.6-.6-1.2-.6-1.2v-7.3c0-.2 0-.4-.1-.6-.3-1.2-1.4-2.2-2.7-2.2h-1c-.3-.7-1.1-1.2-2.1-1.2s-1.8.5-2.1 1.3h-.8c-1.5 0-2.8 1.2-2.8 2.7v7.2l-1.2 2.5-.2.4h14.4zm-12.2-.8.1-.2.5-1v-.1-7.6c0-.8.7-1.5 1.5-1.5h6.1c.8 0 1.5.7 1.5 1.5v7.5.1l.6 1.2h-10.3z"></path><path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path></svg>  
+                                            
+                                                    <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Thông báo</span>
+                                                </a>
+                                            </template>
+
+                                            <v-list class="pa-0 d-flex align-center" width="400px" height="310px">
+                                                <v-list-item class="pa-0 d-flex justify-center align-center ">
+                                                    <v-list-item-content>
+                                                        <v-img
+                                                            :src="require('@/assets/img/notify-nologin.png')"
+                                                            height="100px"
+                                                            width="100px"
+                                                            postion="center center"
+                                                            contain
+                                                        >
+                                                            
+                                                        </v-img>
+                                                        <v-list-item-title class="subtitle-2 text-center font-weight-light mt-4">Đăng nhập để xem Thông báo</v-list-item-title>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list>
+                                            <v-list class="d-flex pa-0" color="white" height="40px" width="auto">
+                                                <v-list-item class="pa-0">
+                                                    <v-list-item-content class="pa-0 col-12 mb-2">
+                                                        <v-btn 
+                                                            depressed 
+                                                            class="rounded-0 col-6 subtitle-2 font-weight-light text-capitalize"
+                                                            min-height="40px"
+                                                        >
+                                                            Đăng ký
+                                                        </v-btn>
+                                                        <v-btn 
+                                                            depressed 
+                                                            class="rounded-0 col-6 subtitle-2 font-weight-light text-capitalize"
+                                                            min-height="40px"
+                                                        >
+                                                            Đăng nhập
+                                                        </v-btn>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list>
+                                        </v-menu>
                                     </v-hover>
                                 </v-list-item-title>
                             </v-list-item-content>
@@ -1738,10 +1789,6 @@
 
 <style scoped>
 
-* {
-    box-sizing: inherit;
-}
-
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -1797,6 +1844,10 @@
     flex-basis: 33%;
     background-size: contain;
     margin: 0 8px 8px 0;
+    overflow: hidden;
+}
+
+.v-menu__content {
     overflow: hidden;
 }
 
