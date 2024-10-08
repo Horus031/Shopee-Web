@@ -36,13 +36,72 @@
                             <v-list-item-content class="pa-0" >
                                 <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
                                     <v-hover v-slot="{ hover }">
-                                        <a href="" 
-                                        style="font-size: 14px;" 
-                                        class="text-decoration-none pa-2"
-                                        :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
-                                    >
-                                        Tải ứng dụng
-                                    </a>
+                                        <v-menu
+                                            open-on-hover
+                                            bottom
+                                            offset-y
+                                        >
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <a
+                                                    href=""
+                                                    style="font-size: 14px; position:relative;"
+                                                    class="text-decoration-none pa-2 d-inline-block"
+                                                    :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
+                                                    v-bind="attrs"
+                                                    v-on="on"
+                                                >
+                                                    Tải ứng dụng
+                                                </a>
+                                            </template>
+
+                                            <v-list class="pa-0">
+                                                <v-list-item class="pa-0">
+                                                    <v-list-item-content style="max-width:180px">
+                                                        <v-img
+                                                            src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/5b6e787c2e5ee052.png"
+                                                            height="180px"
+                                                        >
+                                                        </v-img>
+
+                                                        <v-sheet color="transparent" class="d-flex justify-space-between flex-wrap" style="padding: 0 15px 5px 15px;">
+                                                            <div class="pt-1">
+                                                                <v-img
+                                                                    class="d-flex"
+                                                                    :src="require('@/assets/img/appstore_qrcode.png')"
+                                                                    height="18px"
+                                                                    width="70px"
+                                                                    position="left center"
+                                                                    contain
+                                                                >
+                                                                </v-img>
+                                                            </div>
+                                                            <div class="pt-1">
+                                                                <v-img
+                                                                    class="d-flex"
+                                                                    :src="require('@/assets/img/googleplay_qrcode.png')"
+                                                                    height="18px"
+                                                                    width="70px"
+                                                                    position="left center"
+                                                                    contain
+                                                                >
+                                                                </v-img>
+                                                            </div>
+                                                            <div class="pt-1">
+                                                                <v-img
+                                                                    class="d-flex"
+                                                                    :src="require('@/assets/img/appgallery_qrcode.png')"
+                                                                    height="18px"
+                                                                    width="70px"
+                                                                    position="left center"
+                                                                    contain
+                                                                >
+                                                                </v-img>
+                                                            </div>
+                                                        </v-sheet>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list>
+                                        </v-menu>
                                     </v-hover>
                                 </v-list-item-title>
                             </v-list-item-content>
@@ -130,28 +189,30 @@
                             <v-list-item-content class="pa-0">
                                 <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center">
                                     <v-hover v-slot="{ hover }">
-                                        <a 
+                                        <RouterLink 
+                                            to="./signup"
                                             href="" 
                                             style="font-size: 14px;" 
                                             class="text-decoration-none pa-2 header__navbar-item--separator"
                                             :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                         >
                                             Đăng Ký
-                                        </a>
+                                        </RouterLink>
                                     </v-hover>
                                 </v-list-item-title>
                             </v-list-item-content>
                             <v-list-item-content class="pa-0" >
                                 <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center">
                                     <v-hover v-slot="{ hover }">
-                                        <a 
+                                        <RouterLink 
+                                            to="/login"
                                             href="" 
                                             style="font-size: 14px;" 
                                             class="text-decoration-none pa-2"
                                             :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                         >
                                             Đăng Nhập
-                                        </a>
+                                        </RouterLink>
                                     </v-hover>
                                 </v-list-item-title>
                             </v-list-item-content>
@@ -221,7 +282,7 @@
             </div>
         </v-sheet>
 
-        <!-- Footer -->
+        <!-- First Footer -->
         <v-footer color="white" style="border-top: 4px solid #ee4d2d !important;">
             <div class="grid">
                 <v-sheet class="mt-15 pb-8">
@@ -414,7 +475,7 @@
                             <span >
                                 <span v-for="(trend, index) in trends" :key="index">
                                     <a href="" class="black--text">{{ trend.name }}</a>
-                                    <template v-if="index < brands.length - 1"> | </template>
+                                    <template v-if="index < trends.length - 1"> | </template>
                                 </span>
                             </span>
                         </div>
@@ -429,7 +490,7 @@
                             <span >
                                 <span v-for="(find, index) in findList" :key="index">
                                     <a href="" class="black--text">{{ find.name }}</a>
-                                    <template v-if="index < brands.length - 1"> | </template>
+                                    <template v-if="index < findList.length - 1"> | </template>
                                 </span>
                             </span>
                         </div>
@@ -999,6 +1060,7 @@
             </div>
         </v-footer>
 
+        <!-- Second Footer -->
         <v-footer color="grey lighten-5">
             <div class="grid">
                 <v-sheet class="row" color="transparent" style="margin: -10px -5px 0 -5px;">
@@ -1416,9 +1478,104 @@
                     </div>
                 </v-sheet>
 
-                <v-sheet>
-            
+                <v-divider></v-divider>
+
+                <!-- Country Footer-->
+                <v-sheet class="d-flex justify-space-between py-10" color="transparent">
+                    <span class="mr-6 subtitle-2 grey--text text--darken-2 font-weight-light">© 2024 Shopee. Tất cả các quyền được bảo lưu.</span>
+                    <div class="d-flex">
+                        <div class="subtitle-2 grey--text text--darken-2 font-weight-light">
+                            <span>Quốc gia & Khu vực:</span>
+                            <span>
+                                <span v-for="(country, index) in countryList" :key="index">
+                                    <a href="" class="text-decoration-none grey--text text--darken-2 font-weight-light">{{ country.name }}</a>
+                                    <template v-if="index < countryList.length - 1"> | </template>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
                 </v-sheet>
+            </div>
+        </v-footer>
+
+        <!-- Third Footer -->
+        <v-footer color="grey lighten-4 pt-10 pb-9">
+            <div class="grid">
+                <!-- Policy Link -->
+                <div class="mb-10 d-flex justify-center caption font-weight-light">
+                    <div class="px-6">
+                        <a href="" class="grey--text text--darken-2 text-decoration-none">CHÍNH SÁCH BẢO MẬT</a>
+                    </div>
+                    <div class="px-6">
+                        <a href="" class="grey--text text--darken-2 text-decoration-none">QUY CHẾ HOẠT ĐỘNG</a>
+                    </div>
+                    <div class="px-6">
+                        <a href="" class="grey--text text--darken-2 text-decoration-none">CHÍNH SÁCH VẬN CHUYỂN</a>
+                    </div>
+                    <div class="px-6">
+                        <a href="" class="grey--text text--darken-2 text-decoration-none">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                    </div>
+                </div>
+
+                <!-- Policy Image -->
+                <div class="d-flex justify-center align-center mt-0">
+                    <a href="" class="px-5">
+                        <v-img
+                            :src="require('@/assets/img/registered_policy.png')"
+                            max-height="45px"
+                            contain
+                            position="center center"    
+                        >
+
+                        </v-img>
+                    </a>
+                    <a href="" class="px-5">
+                        <v-img
+                            :src="require('@/assets/img/registered_policy.png')"
+                            max-height="45px"
+                            contain
+                            position="center center"    
+                        >
+
+                        </v-img>
+                    </a>
+                    <a href="" class="px-5">
+                        <v-img
+                            :src="require('@/assets/img/handprint_policy.png')"
+                            max-height="45px"
+                            contain
+                            position="center center"    
+                        >
+
+                        </v-img>
+                    </a>
+                </div>
+
+                <!-- Company -->
+                <div class="caption d-block text-center mt-2 mb-6 grey--text text--darken-2 font-weight-light">Công ty TNHH Shopee</div>
+
+                <div class="mt-2">
+                    <span class="caption grey--text text--darken-2 font-weight-light d-block text-center">
+                        <span v-for="(address, index) in addresses" :key="index">
+                            Địa chỉ:
+                            <span>{{ address.name }}</span>
+                        </span>
+                        <span v-for="(hotline, index) in hotlineAndEmail" :key="index">
+                            Tổng đài hỗ trợ:
+                            <span>{{ hotline.name }}</span>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="mt-2 caption d-block text-center grey--text text--darken-2 font-weight-light">
+                    Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Bùi Anh Tuấn
+                </div>
+                <div class="mt-2 caption d-block text-center grey--text text--darken-2 font-weight-light">
+                    Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015
+                </div>
+                <div class="mt-2 caption d-block text-center grey--text text--darken-2 font-weight-light">
+                    © 2015 - Bản quyền thuộc về Công ty TNHH Shopee
+                </div>
             </div>
         </v-footer>
     </v-app>
@@ -1554,7 +1711,25 @@
                 {  name: 'Dr. Bei Vietnam' },
                 {  name: 'Duku Shop' },
                 {  name: 'Bag for Kids' },
-
+            ],
+            countryList: [
+                { name: 'Singapore' },
+                { name: 'Indonesia' },
+                { name: 'Thái Lan' },
+                { name: 'Malaysia' },
+                { name: 'Việt Nam' },
+                { name: 'Philippines' },
+                { name: 'Brazil' },
+                { name: 'México' },
+                { name: 'Colombia' },
+                { name: 'Chile' },
+                { name: 'Đài Loan' },
+            ],
+            addresses: [
+                { name: 'Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.' }
+            ],
+            hotlineAndEmail: [
+                { name: '19001221 - Email: cskh@hotro.shopee.vn'}
             ]
         }
     }
@@ -1624,7 +1799,6 @@
     margin: 0 8px 8px 0;
     overflow: hidden;
 }
-
 
 
 </style>
