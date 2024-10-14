@@ -34,9 +34,9 @@
                             <v-list-item-content class="pa-0" >
                                 <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
                                     <v-menu
-                                    open-on-hover
-                                    bottom
-                                    offset-y
+                                        open-on-hover
+                                        bottom
+                                        offset-y
                                     >
                                         <template v-slot:activator="{ on, attrs }">
                                             <v-hover v-slot="{ hover }">
@@ -174,6 +174,7 @@
                                                         depressed 
                                                         class="rounded-0 col-6 subtitle-2 font-weight-light text-capitalize"
                                                         min-height="40px"
+                                                        to="/signup"
                                                     >
                                                         Đăng ký
                                                     </v-btn>
@@ -181,6 +182,7 @@
                                                         depressed 
                                                         class="rounded-0 col-6 subtitle-2 font-weight-light text-capitalize"
                                                         min-height="40px"
+                                                        to="/login"
                                                     >
                                                         Đăng nhập
                                                     </v-btn>
@@ -195,7 +197,7 @@
                                     <v-hover v-slot="{ hover }">
                                         <a 
                                             href="" 
-                                            class="text-decoration-none white--text d-flex align-center" 
+                                            class="text-decoration-none white--text d-flex align-center"
                                             style="font-size: 14px;"
                                             :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
                                         >
@@ -223,7 +225,7 @@
                                             nudge-left="90"
                                         >
                                             <template v-slot:activator="{ on, attrs }">
-                                                <v-hover v-slot="{hover}">
+                                                <v-hover v-slot="{ hover }">
                                                     <a 
                                                         href="" 
                                                         class="text-decoration-none d-flex align-center"
@@ -233,12 +235,12 @@
                                                         
                                                     >
                                                         <svg class="pr-1" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path :style="{ stroke: hover ? '#ffffffb3' : '#fff' }" d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            <path :style="{ stroke: hover ? '#ffffffb3' : '#fff' }" d="M5.33464 8.00004C5.33464 11.6819 6.52854 14.6667 8.0013 14.6667C9.47406 14.6667 10.668 11.6819 10.668 8.00004C10.668 4.31814 9.47406 1.33337 8.0013 1.33337C6.52854 1.33337 5.33464 4.31814 5.33464 8.00004Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                            <path :style="{ stroke: hover ? '#ffffffb3' : '#fff' }" d="M1.33398 8H14.6673" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M5.33464 8.00004C5.33464 11.6819 6.52854 14.6667 8.0013 14.6667C9.47406 14.6667 10.668 11.6819 10.668 8.00004C10.668 4.31814 9.47406 1.33337 8.0013 1.33337C6.52854 1.33337 5.33464 4.31814 5.33464 8.00004Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M1.33398 8H14.6673" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                                         </svg>
                                                     
-                                                        <span :style="{ color: hover ? '#ffffffb3' : '#fff' }">Tiếng Việt</span>
+                                                        <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Tiếng Việt</span>
 
                                                         <v-icon dense :color="hover ? '#ffffffb3' : '#fff'">mdi mdi-chevron-down</v-icon>
                                                     </a>
@@ -384,7 +386,12 @@
 <script>
 export default {
     name: 'headerNavbar',
-}
+    data() {
+        return {
+            hover: false,
+        };
+    }, 
+};
 </script>
 
 <style scoped>

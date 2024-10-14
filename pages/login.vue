@@ -23,8 +23,8 @@
           </div>
       </header>
   
-      <v-sheet class="body__input-wrapper" style="background-color: rgb(208, 1, 27);">
-          <div class="body__input-img d-flex justify-end align-center" style="margin: 0 auto; min-height: 600px; width: 1040px; background-image: url(&quot;https://down-vn.img.susercontent.com/file/sg-11134004-7rdxf-m0if24rl9hgwb5&quot;); background-size: contain; background-repeat: no-repeat; background-position: top center;">
+      <v-sheet class="body__input-wrapper" style="background-color: rgb(238, 77, 45);">
+          <div class="body__input-img d-flex justify-end align-center" style="margin: 0 auto; min-height: 600px; width: 1040px; background-image: url(https://down-vn.img.susercontent.com/file/sg-11134004-7rdym-m0ihy05v3xyo0e); background-size: contain; background-repeat: no-repeat; background-position: top center;">
               <div class="body__input-register-wrapper d-flex justify-space-between">
                   <v-sheet class="body__input-register" elevation="1" rounded style="width: 400px; background-color: white">
                       <div class="body__input-register-label d-flex justify-space-between black--text text-no-wrap align-center" style="padding: 22px 30px;">
@@ -62,7 +62,6 @@
                               name="input-10-1"
                               hint="At least 8 characters"
                               @click:append="show1 = !show1"
-                              autofocus="false"
                           >
                           </v-text-field>
   
@@ -124,29 +123,42 @@
               </div>
           </div>
       </v-sheet>
+
+      <!-- Second Footer -->
+      <secondFooter></secondFooter>
+
+      <!-- Third Footer -->
+      <thirdFooter></thirdFooter>
     </v-app>
   </template>
   
-  <script>
-    export default {
-      data () {
+<script>
+import secondFooter from '../components/secondFooter.vue';
+import thirdFooter from '../components/thirdFooter.vue';
+
+export default {
+    components: {
+        secondFooter,
+        thirdFooter,
+    },
+    data () {
         return {
-          show1: false,
-          show2: true,
-          show3: false,
-          show4: false,
-          password: '',
-          rules: {
-            required: value => !!value || 'Vui lòng điền vào mục này',
-            min: v => v.length >= 8 || 'Min 8 characters',
-            emailMatch: () => (`The email and password you entered don't match`),
-          },
+            show1: false,
+            show2: true,
+            show3: false,
+            show4: false,
+            password: '',
+            rules: {
+                required: value => !!value || 'Vui lòng điền vào mục này',
+                min: v => v.length >= 8 || 'Min 8 characters',
+                emailMatch: () => (`The email and password you entered don't match`),
+            },
         }
-      },
-    }
-  </script>
+    },
+}
+</script>
   
-  <style>
+<style>
   
   
   .body__input-register-qr--arrow {

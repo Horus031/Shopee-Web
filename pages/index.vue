@@ -32,9 +32,7 @@ import thirdFooter from '../components/thirdFooter.vue';
         secondFooter,
         thirdFooter,
     },
-    data() {
-        
-    }
+    
 }
 </script>
 
