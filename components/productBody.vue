@@ -5,56 +5,64 @@
                 <v-sheet class="flex-grow-1" color="transparent" max-width="800px">
                     <v-stepper non-linear rounded="2" flat height="100%" v-model="e1">
                         <v-stepper-header class="justify-center align-end" style="height: 100%;">
-                            <v-card 
-                                class="d-flex align-end justify-center" 
-                                height="100%" 
-                                style="position:relative"
-                                rounded="sm"
-                            >
-                                <div>
-                                    <v-stepper-content v-for="(step, index) in steps" :key="index" :step="index" class="pa-0" >
-                                        <v-img :src="step.src" width="796px" height="235px" ></v-img>
-                                        
-                                    </v-stepper-content>
-                                </div>
-                                
-                                <div style="position:absolute;" class="d-flex mb-4">
-                                    <v-stepper-step 
-                                        v-for="(step, index) in steps" 
-                                        :key="index" 
-                                        editable 
-                                        :step="index"
-                                    >
-                                    </v-stepper-step>
-                                </div>
+                            <v-hover v-slot="{ hover }">
+                                <v-stepper-items
+                                    class="d-flex align-end justify-center" 
+                                    height="100%" 
+                                    style="position:relative; overflow: hidden;"
+                                    tile
+                                >
+                                    <div>
+                                        <v-stepper-content v-for="(step, index) in steps" :key="index" :step="index" class="pa-0" >
+                                            <v-img :src="step.src" width="796px" height="235px" ></v-img>
+                                        </v-stepper-content>
+                                    </div>
+                                    
+                                    <div style="position:absolute;" class="d-flex mb-4">
+                                        <v-stepper-step 
+                                            v-for="(step, index) in steps" 
+                                            :key="index" 
+                                            editable 
+                                            :step="index"
+                                        >
+                                        </v-stepper-step>
+                                    </div>
 
-                                <div>
-                                    <v-btn 
-                                        @click="e1 = e1 > 0 ? e1 - 1 : steps.length - 1"
-                                        absolute
-                                        primary
-                                        style="top: calc(50% - 18px); left: 0;"
-                                        height="60px"
-                                        class="pa-0"
-                                        min-width="35px"
-                                        >
-                                        <v-icon>mdi-chevron-left</v-icon>
-                                    </v-btn>
-                                    <v-btn 
-                                        @click="e1 = (e1 + 1) % steps.length || 0"
-                                        absolute
-                                        primary
-                                        style="top: calc(50% - 18px); right: 0;"
-                                        height="60px"
-                                        width="35px"
-                                        class="pa-0"
-                                        min-width="35px"
-                                        >
-                                        
-                                        <v-icon>mdi-chevron-right</v-icon>
-                                    </v-btn>
-                                </div>
-                            </v-card>
+                                    <div>
+                                        <v-fade-transition>
+                                            <v-btn
+                                                v-if="hover" 
+                                                @click="e1 = e1 > 0 ? e1 - 1 : steps.length - 1"
+                                                absolute
+                                                style="top: calc(40% - 5px); left: 0;"
+                                                height="60px"
+                                                class="pa-0 white--text"
+                                                min-width="35px"
+                                                color="#00000052"
+                                                tile
+                                            >
+                                                <v-icon>mdi-chevron-left</v-icon>
+                                            </v-btn>
+                                        </v-fade-transition>
+                                        <v-fade-transition>
+                                            <v-btn
+                                                v-if="hover" 
+                                                @click="e1 = (e1 + 1) % steps.length || 0"
+                                                absolute
+                                                style="top: calc(40% - 5px); right: 0;"
+                                                height="60px"
+                                                width="35px"
+                                                class="pa-0 white--text"
+                                                min-width="35px"
+                                                color="#00000052"
+                                                tile
+                                            >
+                                                <v-icon>mdi-chevron-right</v-icon>
+                                            </v-btn>
+                                        </v-fade-transition>
+                                    </div>
+                                </v-stepper-items>
+                            </v-hover>
                         </v-stepper-header>
                     </v-stepper>
                 </v-sheet>
