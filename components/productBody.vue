@@ -12,8 +12,9 @@
                                 rounded="sm"
                             >
                                 <div>
-                                    <v-stepper-content v-for="(step, index) in steps" :key="index" :step="index + 1" class="pa-0">
-                                        <v-img :src="step.src" width="796px" height="240px"></v-img>
+                                    <v-stepper-content v-for="(step, index) in steps" :key="index" :step="index" class="pa-0" >
+                                        <v-img :src="step.src" width="796px" height="235px" ></v-img>
+                                        
                                     </v-stepper-content>
                                 </div>
                                 
@@ -22,9 +23,36 @@
                                         v-for="(step, index) in steps" 
                                         :key="index" 
                                         editable 
-                                        :step="index + 1"
+                                        :step="index"
                                     >
                                     </v-stepper-step>
+                                </div>
+
+                                <div>
+                                    <v-btn 
+                                        @click="e1 = e1 > 0 ? e1 - 1 : steps.length - 1"
+                                        absolute
+                                        primary
+                                        style="top: calc(50% - 18px); left: 0;"
+                                        height="60px"
+                                        class="pa-0"
+                                        min-width="35px"
+                                        >
+                                        <v-icon>mdi-chevron-left</v-icon>
+                                    </v-btn>
+                                    <v-btn 
+                                        @click="e1 = (e1 + 1) % steps.length || 0"
+                                        absolute
+                                        primary
+                                        style="top: calc(50% - 18px); right: 0;"
+                                        height="60px"
+                                        width="35px"
+                                        class="pa-0"
+                                        min-width="35px"
+                                        >
+                                        
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
                                 </div>
                             </v-card>
                         </v-stepper-header>
@@ -66,22 +94,24 @@ export default {
     name: 'productBody',
     data() {
         return {
-            e1: 1,
+            e1: 0,
             steps: [
-                { src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m188wmt5mcmz6f_xxhdpi" },
-                { src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m188wmt5mcmz6f_xxhdpi" },
-                { src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m188wmt5mcmz6f_xxhdpi" },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
-                { src: 'https://cf.shopee.vn/file/sg-11134258-7rdvy-m16q7tvpi2fi29_xxhdpi' },
+                { src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m0sil68ehi1b66_xxhdpi" }, 
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdvo-m188y9zt1t8x76_xxhdpi" }, 
+                { src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m188wmt5mcmz6f_xxhdpi" }, 
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdwu-m184vwqhxl3t1b_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdvf-m1c5ja9uti1hbb_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdwp-m1cdx5jpvojpa6_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdvt-m1c5jhuvpyka1a_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdvh-m185k7i5tcjyc3_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdyx-m1857c6xw68ubc_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdwy-m1858r0tgyw47d_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdwi-m185dqiyqzkue1_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdxc-m185k56nad9a92_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdxd-m185k3m1iec9cc_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdw7-m186mosslplf08_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdxb-m1894lontabk44_xxhdpi" },
+                { src: "https://cf.shopee.vn/file/sg-11134258-7rdyk-m186t36hibd6ca_xxhdpi" },
             ],
         }
     },
