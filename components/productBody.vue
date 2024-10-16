@@ -1,9 +1,10 @@
 <template>
     <v-sheet color="white" style="margin-top: 120px">
         <div class="grid">
-            <div class="d-flex pt-7 pb-7" >
-                <v-sheet class="flex-grow-1" color="transparent" max-width="800px">
-                    <v-stepper non-linear rounded="2" flat height="100%" v-model="e1">
+            <div class="d-flex pt-7 pb-3 flex-column" >
+                <v-sheet class="flex-grow-1 d-flex" color="transparent" max-width="100%">
+                    <!-- Product Advertisements -->
+                    <v-stepper  class="flex-grow-1" non-linear rounded="2" flat height="100%" v-model="e1">
                         <v-stepper-header class="justify-center align-end" style="height: 100%;">
                             <v-hover v-slot="{ hover }">
                                 <v-stepper-items
@@ -65,32 +66,62 @@
                             </v-hover>
                         </v-stepper-header>
                     </v-stepper>
+                    
+                    <v-sheet class="d-flex flex-column flex-grow-1 justify-space-between" color="transparent">
+                        <div>
+                            <a href="">
+                                <v-img
+                                src="https://cf.shopee.vn/file/sg-11134258-7rdxi-m16tffq32hr261_xhdpi"
+                                max-height="115px"
+                                width="388px"
+                                contain
+                                
+                                ></v-img>
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <a href="">
+                                <v-img
+                                src="https://cf.shopee.vn/file/sg-11134258-7rdx2-m16tfhqs446155_xhdpi"
+                                max-height="115px"
+                                width="388px"
+                                contain
+                                >
+                                </v-img>
+                            </a>
+                        </div>
+                    </v-sheet>
                 </v-sheet>
 
-                <v-sheet class="d-flex flex-column justify-space-between" color="transparent">
-                    <div>
-                        <a href="">
-                            <v-img
-                            src="https://cf.shopee.vn/file/sg-11134258-7rdxi-m16tffq32hr261_xhdpi"
-                            max-height="115px"
-                            width="388px"
-                            contain
-                            
-                            ></v-img>
-                        </a>
-                    </div>
-                    
-                    <div>
-                        <a href="">
-                            <v-img
-                            src="https://cf.shopee.vn/file/sg-11134258-7rdx2-m16tfhqs446155_xhdpi"
-                            max-height="115px"
-                            width="388px"
-                            contain
-                            >
-                            </v-img>
-                        </a>
-                    </div>
+                <v-sheet>
+                    <!-- Product Services -->
+                    <v-list class="pa-0 col-12">
+                        <v-list-item class="pa-0 col-12">
+                            <v-list-item-content class="d-flex justify-space-around col-12 pt-2">
+                                <v-list-item-title class="d-flex justify-center align-center col-2 pa-0" v-for="(service, index) in services" :key="index" style="width: auto;">
+                                    <v-sheet  width="150px" min-height="108px" color="transparent" class="d-flex justify-center text-center"> <!--This to set the width-->
+                                        <a href="" class="d-flex align-center flex-column text-decoration-none black--text text-wrap" style="width: 100%">
+                                            <div class="mt-4 mb-2 ml-auto mr-auto d-flex justify-center"> <!-- This to set margin -->
+                                                <v-img
+                                                    :src="service.src"
+                                                    position="center center"
+                                                    width="45px"
+                                                    height="45px"
+                                                    contain
+                                                >
+                                                </v-img>
+                                            </div>
+                                            <div style="line-height: 1; font-size: 14px;">
+                                                {{ service.name }}
+                                            </div>
+                                        </a>
+                                        
+                                    </v-sheet>
+                                </v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
                 </v-sheet>
             </div>
         </div>
@@ -120,6 +151,14 @@ export default {
                 { src: "https://cf.shopee.vn/file/sg-11134258-7rdw7-m186mosslplf08_xxhdpi" },
                 { src: "https://cf.shopee.vn/file/sg-11134258-7rdxb-m1894lontabk44_xxhdpi" },
                 { src: "https://cf.shopee.vn/file/sg-11134258-7rdyk-m186t36hibd6ca_xxhdpi" },
+            ],
+            services: [
+                { name: "Voucher Giảm Đến 1 Triệu", src: "https://cf.shopee.vn/file/vn-50009109-f6c34d719c3e4d33857371458e7a7059_xhdpi"},
+                { name: "Miễn Hết Phí Ship Cho Mọi Đơn", src: "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi" },
+                { name: "Shopee Siêu Rẻ", src: "https://cf.shopee.vn/file/vn-50009109-91399a1d3ed283d272b069fac5ca989c_xhdpi"},
+                { name: "Shopee Style Voucher 30%", src: "https://cf.shopee.vn/file/vn-50009109-c02353c969d19918c53deaa4ea15bdbe_xhdpi"},
+                { name: "Hàng Quốc Tế", src: "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi"},
+                { name: "Nạp Thẻ, Dịch Vụ & Vé Phim", src: "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi"},
             ],
         }
     },
