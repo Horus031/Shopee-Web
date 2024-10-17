@@ -125,6 +125,32 @@
                 </v-sheet>
             </div>
         </div>
+
+        <v-sheet color="grey pt-5">
+            <v-card class="grid" rounded="sm" flat max-height="302px">
+                <v-card-title>
+                    <h4>DANH MỤC</h4>
+                </v-card-title>
+                <v-list class="pa-0 d-flex">
+                    <v-list-item class="pa-0 d-flex col overflow-x-auto">
+                        <v-list-content v-for="(category, index) in categories" :key="index" class="col-2">
+                            <a href="" class="text-decoration-none black--text">
+                                <div class="d-flex flex-column align-center">
+                                    <v-img
+                                        :src="category.src"
+                                        height="83px"
+                                        max-width="85px"
+                                        contain
+                                        position="center"
+                                    ></v-img>
+                                    <v-list-item-title class="subtitle-2">{{ category.name }}</v-list-item-title>
+                                </div>                                
+                            </a>
+                        </v-list-content>
+                    </v-list-item>
+                </v-list>
+            </v-card>
+        </v-sheet>
     </v-sheet>
 </template>
 
@@ -160,9 +186,26 @@ export default {
                 { name: "Hàng Quốc Tế", src: "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi"},
                 { name: "Nạp Thẻ, Dịch Vụ & Vé Phim", src: "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi"},
             ],
+            categories: [
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thời Trang Nữ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+            ]
         }
     },
-}
+};
 </script>
 
 <style scoped>

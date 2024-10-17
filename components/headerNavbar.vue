@@ -60,7 +60,7 @@
                                                         src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/5b6e787c2e5ee052.png"
                                                         height="180px"
                                                     >
-                                                </v-img>
+                                                    </v-img>
 
                                                     <v-sheet color="transparent" class="d-flex justify-space-between flex-wrap" style="padding: 0 15px 5px 15px;">
                                                         <div class="pt-1">
@@ -416,10 +416,6 @@ export default {
     padding: 6px 0;
 }
 
-.item-first {
-    padding-top: 16px;
-}
-
 .header__navbar-item--separator::after {
     content: "";
     display: block;
@@ -457,8 +453,6 @@ export default {
 .v-menu__content {
     overflow: hidden;
 }
-
-
 
 .language-hover:hover {
     stroke: #ffffffb3;
