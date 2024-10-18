@@ -1,16 +1,18 @@
 <template>
-    <div class="cont d-flex" style="justify-content: center; display: flex; flex-direction: column;">
-        <v-card style="background-color: #ee4d2d ; display: flex;flex-direction: column;" class="real" elevation="0" outlined>
-            <v-card-title class="pa-0 ma-0" style="padding:0px; justify-content: center;">
-                <div style="min-width:700px; max-width: 700px;">
-                    <p style="color: white; padding-bottom: 50px;padding-top: 25px; font-size: 36px; text-align: center;">Xin chào shopee có thể giúp gì cho bạn?</p>
-                    <v-text-field outlined solo placeholder="nhập từ khoá hoặc nội dung cần tìm" label="nhập từ khoá hoặc nội dung cần tìm" class="searchbar" style="margin:auto ; padding-bottom: 10px; position: relative; ">
-                        
+    <div class="d-flex" style="justify-content: center; display: flex; flex-direction: column;">
+        <v-card style="background-color: #ee4d2d ; display: flex; flex-direction: column; align-items: center;" class="real" elevation="0" outlined>
+            <v-card-title class="pa-0 ma-0 d-flex flex-column" style="padding:0px; justify-content: center;">
+                <p style="color: white; padding-bottom: 38px;padding-top: 60px; font-size: 36px; text-align: center; font-weight: normal;">Xin chào, Shopee có thể giúp gì cho bạn?</p>
+            </v-card-title>
+            <v-form style="width: 796px; position: relative; display: flex; padding: 2px;">
+                    <v-text-field solo flat placeholder="Nhập từ khoá hoặc nội dung cần tìm" class="searchbar" style="margin:auto ; padding-bottom: 10px; flex: 1;">
                     </v-text-field> 
-                </div>
-            </v-card-title>    
+                    <v-btn color="#ee4d2d" height="52px" width="80px" absolute style="right: 4px; top: 4px" depressed>
+                                <v-icon style="color: white;" large>mdi mdi-magnify</v-icon>
+                    </v-btn>
+            </v-form>  
         </v-card>
-        <v-sheet class="small" style="margin: auto;">
+        <v-sheet style="margin: auto;" class="cont">
             <p class="supersmall font" style=" max-width:130px; min-width: 130px;margin-top:5%  ; margin-bottom: 2%;">
                 Danh mục
             </p>
@@ -93,9 +95,7 @@
 .flex{
     display: flex;
 }
-.searchbar{
-    min-width: 550px;
-}
+
 .font{
     font-size: 24px;
     font-weight: 500;
@@ -104,13 +104,13 @@
 }
 
 .real{
-    min-width: 1530px;
-    max-width: 1530px;
+    
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Source Han Sans CN-Normal, Noto Sans CJK SC, Segoe UI, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 .cont{
-    min-width: 1530px;
-    max-width: 1530px;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Source Han Sans CN-Normal, Noto Sans CJK SC, Segoe UI, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 
 }
@@ -122,10 +122,7 @@
     line-height: 59px;
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Source Han Sans CN-Normal, Noto Sans CJK SC, Segoe UI, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
-.small{
-    min-width: 81%;
-    max-width: 81%;
-}
+
 .supersmall{
     min-width: 350px;
     max-width: 350px;
@@ -137,4 +134,14 @@
     cursor: pointer;
     border-bottom: 1px dashed #e1e1e1;
 }
+
+::v-deep .v-input__slot {
+    height: 56px;
+}
+
+::v-deep .v-text-field input {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
 </style>
