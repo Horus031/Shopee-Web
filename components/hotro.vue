@@ -7,7 +7,6 @@
                     <v-text-field outlined solo placeholder="nhập từ khoá hoặc nội dung cần tìm" label="nhập từ khoá hoặc nội dung cần tìm" class="searchbar" style="margin:auto ; padding-bottom: 10px; position: relative; ">
                         
                     </v-text-field> 
-                    <v-btn absolute>adjbwoubda</v-btn>
                 </div>
             </v-card-title>    
         </v-card>
