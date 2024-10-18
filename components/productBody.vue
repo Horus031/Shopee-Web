@@ -4,68 +4,43 @@
             <div class="d-flex pt-7 pb-3 flex-column" >
                 <v-sheet class="flex-grow-1 d-flex" color="transparent" max-width="100%">
                     <!-- Product Advertisements -->
-                    <v-stepper  class="flex-grow-1" non-linear rounded="2" flat height="100%" v-model="e1">
-                        <v-stepper-header class="justify-center align-end" style="height: 100%;">
-                            <v-hover v-slot="{ hover }">
-                                <v-stepper-items
-                                    class="d-flex align-end justify-center" 
-                                    height="100%" 
-                                    style="position:relative; overflow: hidden;"
-                                    tile
-                                >
-                                    <div>
-                                        <v-stepper-content v-for="(step, index) in steps" :key="index" :step="index" class="pa-0" >
-                                            <v-img :src="step.src" width="796px" height="235px" ></v-img>
-                                        </v-stepper-content>
-                                    </div>
-                                    
-                                    <div style="position:absolute;" class="d-flex mb-4">
-                                        <v-stepper-step 
-                                            v-for="(step, index) in steps" 
-                                            :key="index" 
-                                            editable 
-                                            :step="index"
-                                        >
-                                        </v-stepper-step>
-                                    </div>
-
-                                    <div>
-                                        <v-fade-transition>
-                                            <v-btn
-                                                v-if="hover" 
-                                                @click="e1 = e1 > 0 ? e1 - 1 : steps.length - 1"
-                                                absolute
-                                                style="top: calc(40% - 5px); left: 0;"
-                                                height="60px"
-                                                class="pa-0 white--text"
-                                                min-width="35px"
-                                                color="#00000052"
-                                                tile
-                                            >
-                                                <v-icon>mdi-chevron-left</v-icon>
-                                            </v-btn>
-                                        </v-fade-transition>
-                                        <v-fade-transition>
-                                            <v-btn
-                                                v-if="hover" 
-                                                @click="e1 = (e1 + 1) % steps.length || 0"
-                                                absolute
-                                                style="top: calc(40% - 5px); right: 0;"
-                                                height="60px"
-                                                width="35px"
-                                                class="pa-0 white--text"
-                                                min-width="35px"
-                                                color="#00000052"
-                                                tile
-                                            >
-                                                <v-icon>mdi-chevron-right</v-icon>
-                                            </v-btn>
-                                        </v-fade-transition>
-                                    </div>
-                                </v-stepper-items>
-                            </v-hover>
-                        </v-stepper-header>
-                    </v-stepper>
+                    <v-carousel  
+                        class="flex-grow-1 d-flex justify-center" 
+                        cycle
+                        width="auto"
+                        height="235"
+                        hide-delimiter-background
+                        show-arrows-on-hover
+                    >
+                        <template v-slot:prev="{on, attrs}">
+                            <v-btn
+                                v-bind="attrs"
+                                v-on="on"
+                                width="auto"
+                                height="60px"
+                                class="pa-0 white--text"
+                                min-width="35px"
+                                tile
+                            >
+                                <v-icon>mdi-chevron-left</v-icon>
+                            </v-btn>
+                        </template>
+                        <template v-slot:next="{on, attrs}">
+                            <v-btn
+                                v-bind="attrs"
+                                v-on="on"
+                                height="60px"
+                                class="pa-0 white--text"
+                                min-width="35px"
+                                tile
+                            >
+                                <v-icon>mdi-chevron-right</v-icon>
+                            </v-btn>
+                        </template>
+                        <v-carousel-item v-for="(step, index) in steps" :key="index">
+                            <v-img :src="step.src" max-width="796px" height="235px" ></v-img>
+                        </v-carousel-item>
+                    </v-carousel>
                     
                     <v-sheet class="d-flex flex-column flex-grow-1 justify-space-between" color="transparent">
                         <div>
@@ -94,12 +69,12 @@
                     </v-sheet>
                 </v-sheet>
 
+                <!-- Product Services -->
                 <v-sheet>
-                    <!-- Product Services -->
-                    <v-list class="pa-0 col-12">
-                        <v-list-item class="pa-0 col-12">
-                            <v-list-item-content class="d-flex justify-space-around col-12 pt-2">
-                                <v-list-item-title class="d-flex justify-center align-center col-2 pa-0" v-for="(service, index) in services" :key="index" style="width: auto;">
+                    <v-list class="pa-0">
+                        <v-list-item class="pa-0 d-flex flex-nowrap justify-space-around">
+                            <v-list-item-content v-for="(service, index) in services" :key="index" style="padding-top: 10px;">
+                                <v-list-item-title class="d-flex justify-center align-center pa-0" style="width: auto;">
                                     <v-sheet  width="150px" min-height="108px" color="transparent" class="d-flex justify-center text-center"> <!--This to set the width-->
                                         <a href="" class="d-flex align-center flex-column text-decoration-none black--text text-wrap" style="width: 100%">
                                             <div class="mt-4 mb-2 ml-auto mr-auto d-flex justify-center"> <!-- This to set margin -->
@@ -126,29 +101,27 @@
             </div>
         </div>
 
-        <v-sheet color="grey pt-5">
-            <v-card class="grid" rounded="sm" flat max-height="302px">
+        <v-sheet color="grey pt-5" >
+            <v-card class="grid" rounded="sm" flat>
                 <v-card-title>
-                    <h4>DANH MỤC</h4>
+                    <h5>DANH MỤC</h5>
                 </v-card-title>
-                <v-list class="pa-0 d-flex">
-                    <v-list-item class="pa-0 d-flex col overflow-x-auto">
-                        <v-list-content v-for="(category, index) in categories" :key="index" class="col-2">
-                            <a href="" class="text-decoration-none black--text">
-                                <div class="d-flex flex-column align-center">
-                                    <v-img
-                                        :src="category.src"
-                                        height="83px"
-                                        max-width="85px"
-                                        contain
-                                        position="center"
-                                    ></v-img>
-                                    <v-list-item-title class="subtitle-2">{{ category.name }}</v-list-item-title>
-                                </div>                                
-                            </a>
-                        </v-list-content>
-                    </v-list-item>
-                </v-list>
+                <v-sheet color="transparent overflow-x-auto d-flex flex-wrap justify-space-between">
+                    <v-hover v-for="(category, index) in categories" :key="index" v-slot="{ hover }" class="pa-4">
+                        <v-card :elevation="hover ? 3 : 0" tile class="d-flex flex-column align-center" max-width="120px" color="transparent">
+                            <v-img
+                            :src="category.src"
+                            max-width="83px"
+                            max-height="83px"
+                            contain
+                        >
+
+                            </v-img>
+                            
+                            <span class="text-center caption" style="text-wrap: wrap;"> {{ category.name }}</span>
+                        </v-card>
+                    </v-hover>
+                </v-sheet>
             </v-card>
         </v-sheet>
     </v-sheet>
@@ -185,27 +158,36 @@ export default {
                 { name: "Shopee Style Voucher 30%", src: "https://cf.shopee.vn/file/vn-50009109-c02353c969d19918c53deaa4ea15bdbe_xhdpi"},
                 { name: "Hàng Quốc Tế", src: "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi"},
                 { name: "Nạp Thẻ, Dịch Vụ & Vé Phim", src: "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi"},
+                { name: "Mã Giảm Giá", src: "https://cf.shopee.vn/file/vn-50009109-8a387d78a7ad954ec489d3ef9abd60b4_xhdpi"},
             ],
             categories: [
                 { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-                { name: 'Thời Trang Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Điện Thoại & Phụ Kiện', src: "https://down-vn.img.susercontent.com/file/31234a27876fb89cd522d7e3db1ba5ca" },
+                { name: 'Thiết Bị Điện Tử', src: "https://down-vn.img.susercontent.com/file/978b9e4cb61c611aaaf58664fae133c5" },
+                { name: 'Máy Tính & Laptop', src: "https://down-vn.img.susercontent.com/file/c3f3edfaa9f6dafc4825b77d8449999d" },
+                { name: 'Máy Ảnh & Máy Quay Phim', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Đồng Hồ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Giày Dép Nam', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thiết Bị Điện Gia Dụng', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Thể Thao & Du Lịch', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Ô Tô & Xe Máy & Xe Đạp', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
                 { name: 'Thời Trang Nữ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
-            ]
+                { name: 'Mẹ & Bé', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Nhà Cửa & Đời Sống', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Sắc Đẹp', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Sức Khỏe', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Giày Dép Nữ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Túi Ví Nữ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Phụ Kiện & Trang Sức Nữ', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Bách Hóa Online', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+                { name: 'Nhà Sách Online', src: "https://down-vn.img.susercontent.com/file/687f3967b7c2fe6a134a2c11894eea4b" },
+            ],
         }
     },
 };
+
+
+
 </script>
 
 <style scoped>
@@ -230,9 +212,6 @@ export default {
     padding: 6px 0;
 }
 
-.item-first {
-    padding-top: 16px;
-}
 
 .header__navbar-item--separator::after {
     content: "";
@@ -250,27 +229,34 @@ export default {
     position: relative;
 }
 
-::v-deep .v-input__control {
-    height: 40px !important;
+::v-deep .v-icon.notranslate.mdi.mdi-circle.theme--dark {
+    font-size: 10px !important;
+    
 }
 
-.v-stepper__step {
-    padding: 0;
-    background-color: rgb(255, 255, 255, 0.6);
+::v-deep .v-carousel__controls__item.v-btn.v-btn--icon.v-btn--round.theme--dark.v-size--small {
+    width: 6px !important;
+    height: 6px !important;
+
+}
+
+::v-deep .v-window__prev{
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+::v-deep .v-window__next {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+::v-deep .v-carousel__controls__item.v-btn.v-item--active.v-btn--icon.v-btn--round.theme--dark.v-size--small {
+    color: #ff2600;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    margin: 0 5px;
+    opacity: 1;
 }
 
-span.v-stepper__step__step,
-.v-application--is-ltr .v-stepper__step__step {
-    margin: 0;
-}
 
-::v-deep span.v-stepper__step__step {
-    display: none;
-}
 
 </style>
