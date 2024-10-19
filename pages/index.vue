@@ -1,36 +1,36 @@
 <template>
     <v-app light>
         <!-- Header Navbar Wrapper-->
-        <headerNavbar></headerNavbar>
+        <headerIndex></headerIndex>
 
         <!-- Products Body -->
-        <productBody></productBody>
+        <bodyIndex></bodyIndex>
 
         <!-- First Footer -->
-        <firstFooter></firstFooter>
+        <firstFooterIndex></firstFooterIndex>
 
         <!-- Second Footer -->
-        <secondFooter></secondFooter>
+        <secondFooterIndex></secondFooterIndex>
 
         <!-- Third Footer -->
-        <thirdFooter></thirdFooter>
+        <thirdFooterIndex></thirdFooterIndex>
     </v-app>
 </template>
 
 <script>
-import headerNavbar from '../components/headerNavbar.vue';
-import productBody from '../components/productBody.vue';
-import firstFooter from '../components/firstFooter.vue';
-import secondFooter from '../components/secondFooter.vue';
-import thirdFooter from '../components/thirdFooter.vue';
+import headerIndex from '../components/header/headerIndex.vue';
+import bodyIndex from '../components/body/bodyIndex.vue';
+import firstFooterIndex from '../components/firstfooter/firstFooterIndex.vue';
+import secondFooterIndex from '../components/secondfooter/secondFooterIndex.vue';
+import thirdFooterIndex from '../components/thirdfooter/thirdFooterIndex.vue';
 
   export default {
     components: {
-        headerNavbar,
-        productBody,
-        firstFooter,
-        secondFooter,
-        thirdFooter,
+        headerIndex,
+        bodyIndex,
+        firstFooterIndex,
+        secondFooterIndex,
+        thirdFooterIndex,
     },
     
 }

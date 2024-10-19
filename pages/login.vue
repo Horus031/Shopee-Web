@@ -133,8 +133,8 @@
   </template>
   
 <script>
-import secondFooter from '../components/secondFooter.vue';
-import thirdFooter from '../components/thirdFooter.vue';
+import secondFooter from '../components/secondfooter/secondFooterIndex.vue';
+import thirdFooter from '../components/thirdfooter/thirdFooterIndex.vue';
 
 export default {
     components: {
