@@ -7,7 +7,7 @@
                         <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
-                                style="font-size: 14px;" 
+                                style="font-size: 13px;" 
                                 class="text-decoration-none pa-2"
                                 :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                             >
@@ -20,7 +20,7 @@
                         <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
-                                style="font-size: 14px;" 
+                                style="font-size: 13px;" 
                                 class="text-decoration-none pa-2"
                                 :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                             >
@@ -40,7 +40,7 @@
                                     <v-hover v-slot="{ hover }">
                                         <a
                                             href=""
-                                            style="font-size: 14px; position:relative;"
+                                            style="font-size: 13px; position:relative;"
                                             class="text-decoration-none pa-2 d-inline-block"
                                             :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                             v-bind="attrs"
@@ -103,7 +103,7 @@
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
                         <v-list-item-title style="width: fit-content;" class="header__navbar-item">
-                            <span href="" style="font-size: 14px; color: white;" class="text-decoration-none py-2 pl-2 pr-1">Kết nối</span>
+                            <span href="" style="font-size: 13px; color: white;" class="text-decoration-none py-2 pl-2 pr-1">Kết nối</span>
                             <a href="" style="margin-top: -1px; margin-right: 6px;">
                                 <v-icon dense color="white">mdi mdi-facebook</v-icon>
                             </a>
@@ -137,7 +137,7 @@
                                         <a 
                                             href="" 
                                             class="text-decoration-none white--text d-flex align-center pa-2"
-                                            style="font-size: 14px;"
+                                            style="font-size: 13px;"
                                             :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
                                             v-bind="attrs"
                                             v-on="on"
@@ -196,7 +196,7 @@
                                 <a 
                                     href="" 
                                     class="text-decoration-none white--text d-flex align-center"
-                                    style="font-size: 14px;"
+                                    style="font-size: 13px;"
                                     :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
                                 >
                                     <svg height="22" viewBox="0 0 16 16" width="22" class="shopee-svg-icon icon-help-center pr-1">
@@ -227,7 +227,7 @@
                                             <a 
                                                 href="" 
                                                 class="text-decoration-none d-flex align-center"
-                                                style="font-size: 14px;"
+                                                style="font-size: 13px;"
                                                 v-bind="attrs"
                                                 v-on="on"
                                                 
@@ -264,7 +264,7 @@
                                 <RouterLink 
                                     to="./signup"
                                     href="" 
-                                    style="font-size: 14px;" 
+                                    style="font-size: 13px;" 
                                     class="text-decoration-none pa-2 header__navbar-item--separator"
                                     :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                 >
@@ -279,7 +279,7 @@
                                 <RouterLink 
                                     to="/login"
                                     href="" 
-                                    style="font-size: 14px;" 
+                                    style="font-size: 13px;" 
                                     class="text-decoration-none pa-2"
                                     :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                 >

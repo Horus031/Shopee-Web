@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+    font-family: Helvetica, sans-serif;
+}
+
 
 .grid {
     width: 1200px;
