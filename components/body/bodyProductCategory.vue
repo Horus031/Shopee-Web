@@ -5,9 +5,9 @@
                 <h5 class="font-weight-light">DANH MỤC</h5>
             </v-card-title>
         </v-card>
-        <v-card class="grid" rounded="sm" tile flat style="overflow-x: auto;" >
+        <v-card class="grid overflow-x-auto" rounded="sm" tile flat>
             <v-sheet color="transparent d-flex flex-wrap" max-height="312px" width="142%"> 
-                <v-card tile class="d-flex flex-wrap align-center overflow-x-auto" color="transparent">
+                <v-card tile class="d-flex flex-wrap align-center" color="transparent">
                     <v-hover v-for="(category, index) in categories" :key="index" v-slot="{ hover }" >
                         <v-card :elevation="hover ? 2 : 0" class="d-flex flex-column align-center" max-width="119px" height="150px" style="padding: 18px;">
                             <a href="" class="text-decoration-none black--text text-center d-flex flex-column align-center" style="text-wrap: wrap; width: 100px">

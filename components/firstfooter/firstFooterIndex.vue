@@ -1,5 +1,5 @@
 <template>
-    <v-footer color="white" style="border-top: 4px solid #ee4d2d !important;">
+    <v-footer color="white border-footer">
         <div class="grid">
             
             <firstFooterAbstract></firstFooterAbstract>
@@ -35,6 +35,10 @@ export default {
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
+}
+
+.border-footer {
+    border-top: 4px solid #ee4d2d !important;
 }
 
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div>
         <nav class="header__navbar d-flex justify-space-between" style="height:34px">
-            <v-list style="background-color: transparent;" class="pa-0">
+            <v-list class="pa-0" color="transparent">
                 <v-list-item class="pa-0 mt-n2" >
                     <v-list-item-content class="pa-0 ">
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
+                        <v-list-item-title class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
                                 style="font-size: 13px;" 
@@ -17,7 +17,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0 ">
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
+                        <v-list-item-title class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
                                 style="font-size: 13px;" 
@@ -30,7 +30,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item header__navbar-item--separator">
+                        <v-list-item-title class="header__navbar-item header__navbar-item--separator">
                             <v-menu
                                 open-on-hover
                                 bottom
@@ -60,7 +60,11 @@
                                             >
                                             </v-img>
 
-                                            <v-sheet color="transparent" class="d-flex justify-space-between flex-wrap" style="padding: 0 15px 5px 15px;">
+                                            <v-sheet 
+                                                color="transparent" 
+                                                class="d-flex justify-space-between flex-wrap" 
+                                                style="padding: 0 15px 5px 15px;"
+                                            >
                                                 <div class="pt-1">
                                                     <v-img
                                                         class="d-flex"
@@ -102,9 +106,15 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item">
-                            <span href="" style="font-size: 13px; color: white;" class="text-decoration-none py-2 pl-2 pr-1">Kết nối</span>
-                            <a href="" style="margin-top: -1px; margin-right: 6px;">
+                        <v-list-item-title class="header__navbar-item">
+                            <span 
+                                class="text-decoration-none py-2 pl-2"
+                                style="font-size: 13px; 
+                                color: white;" 
+                            >
+                                Kết nối
+                            </span>
+                            <a href="" style="margin-top: -1px;">
                                 <v-icon dense color="white">mdi mdi-facebook</v-icon>
                             </a>
 
@@ -122,7 +132,7 @@
             <v-list color="transparent" class="pa-0">
                 <v-list-item class="pa-0 mt-n2" >
                     <v-list-item-content class="pa-0">
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center ">
+                        <v-list-item-title class="header__navbar-item d-flex align-center ">
                             <v-menu
                                 transition="scale-transition"
                                 origin="top right"
@@ -142,7 +152,15 @@
                                             v-bind="attrs"
                                             v-on="on"
                                         >
-                                            <svg style="width: 18px; height: 18px;" viewBox="3 2.5 14 14" x="0" y="0" class="shopee-svg-icon icon-help-center pr-1"><path d="m17 15.6-.6-1.2-.6-1.2v-7.3c0-.2 0-.4-.1-.6-.3-1.2-1.4-2.2-2.7-2.2h-1c-.3-.7-1.1-1.2-2.1-1.2s-1.8.5-2.1 1.3h-.8c-1.5 0-2.8 1.2-2.8 2.7v7.2l-1.2 2.5-.2.4h14.4zm-12.2-.8.1-.2.5-1v-.1-7.6c0-.8.7-1.5 1.5-1.5h6.1c.8 0 1.5.7 1.5 1.5v7.5.1l.6 1.2h-10.3z"></path><path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path></svg>  
+                                            <svg 
+                                                style="width: 18px; 
+                                                height: 18px;" 
+                                                viewBox="3 2.5 14 14" x="0" y="0" 
+                                                class="pr-1"
+                                            >
+                                                <path d="m17 15.6-.6-1.2-.6-1.2v-7.3c0-.2 0-.4-.1-.6-.3-1.2-1.4-2.2-2.7-2.2h-1c-.3-.7-1.1-1.2-2.1-1.2s-1.8.5-2.1 1.3h-.8c-1.5 0-2.8 1.2-2.8 2.7v7.2l-1.2 2.5-.2.4h14.4zm-12.2-.8.1-.2.5-1v-.1-7.6c0-.8.7-1.5 1.5-1.5h6.1c.8 0 1.5.7 1.5 1.5v7.5.1l.6 1.2h-10.3z"></path>
+                                                <path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path>
+                                            </svg>  
                                         
                                             <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Thông báo</span>
                                         </a>
@@ -161,7 +179,11 @@
                                             >
                                                 
                                             </v-img>
-                                            <v-list-item-title class="subtitle-2 text-center font-weight-light mt-4">Đăng nhập để xem Thông báo</v-list-item-title>
+                                            <v-list-item-title 
+                                                class="subtitle-2 text-center font-weight-light mt-4"
+                                            >
+                                                Đăng nhập để xem Thông báo
+                                            </v-list-item-title>
                                         </v-list-item-content>
                                     </v-list-item>
                                 </v-list>
@@ -191,7 +213,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0 ">
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center pa-2">
+                        <v-list-item-title class="header__navbar-item d-flex align-center pa-2">
                             <v-hover v-slot="{ hover }">
                                 <a 
                                     href="" 
@@ -213,7 +235,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center pa-2">
+                        <v-list-item-title class="header__navbar-item d-flex align-center pa-2">
                                 <v-menu
                                     transition="scale-transition"
                                     open-on-hover
@@ -259,7 +281,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0">
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center">
+                        <v-list-item-title class="header__navbar-item d-flex align-center">
                             <v-hover v-slot="{ hover }">
                                 <RouterLink 
                                     to="./signup"
@@ -274,7 +296,7 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
-                        <v-list-item-title style="width: fit-content;" class="header__navbar-item d-flex align-center">
+                        <v-list-item-title class="header__navbar-item d-flex align-center">
                             <v-hover v-slot="{ hover }">
                                 <RouterLink 
                                     to="/login"
