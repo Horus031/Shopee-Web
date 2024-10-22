@@ -1,8 +1,8 @@
 <template>
     <!-- Information Footer -->
     <div>
-        <v-sheet class="row" color="transparent" style="margin: -10px -5px 0 -5px;">
-            <div class="grid-column-2-4 pa-1">
+        <v-sheet class="row pa-1" color="transparent" style="margin: -10px -5px 0 -5px;">
+            <div class="grid-column-2-4 pa-2">
                 <div class="mt-10 mb-5 caption font-weight-bold">
                     CHĂM SÓC KHÁCH HÀNG
                 </div>
@@ -67,7 +67,7 @@
                     </v-list-item>
                 </v-list>
             </div>
-            <div class="grid-column-2-4 pa-1">
+            <div class="grid-column-2-4 pa-2">
                 <div class="mt-10 mb-5 caption font-weight-bold">
                     VỀ SHOPEE
                 </div>
@@ -123,7 +123,7 @@
                 </v-list>
             
             </div>
-            <div class="grid-column-2-4 pa-1">
+            <div class="grid-column-2-4 pa-2">
                 <div class="mt-10 mb-5 caption font-weight-bold">
                     THANH TOÁN
                 </div>
@@ -330,7 +330,7 @@
                 </v-list>
                 
             </div>
-            <div class="grid-column-2-4 pa-1">
+            <div class="grid-column-2-4 pa-2">
                 <div class="mt-10 mb-5 caption font-weight-bold">
                     THEO DÕI CHÚNG TÔI TRÊN
                 </div>
@@ -360,7 +360,7 @@
                 </v-list>
 
             </div>
-            <div class="grid-column-2-4 pa-1">
+            <div class="grid-column-2-4 pa-2">
                 <div class="mt-10 mb-5 caption font-weight-bold">
                     TẢI ỨNG DỤNG SHOPEE NGAY THÔI
                 </div>
@@ -452,6 +452,9 @@ export default {
 
 .v-list-item__content{
     align-self: normal;
+    padding: 0;
+    margin-bottom: 12px;
 }
+
 
 </style>

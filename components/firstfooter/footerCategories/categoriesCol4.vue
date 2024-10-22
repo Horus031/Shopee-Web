@@ -1,14 +1,14 @@
 <template>
     <div>
-        <div class="pa-1">
+        <div>
             <div v-for="(footerCate, index) in footerCategories" :key="index"> 
                 <div>
-                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                    <div style="margin: 7px 0px 0px 5px; padding: 2px 0">
                         <v-hover v-slot="{ hover }">
                             <a
                                 :class="hover ? 'shopeecolor--text' : 'grey--text darken-4'"
                                 href="" 
-                                class="caption text-decoration-none font-weight-bold "
+                                class="caption text-decoration-none font-weight-bold text-uppercase"
                             >
                                 {{ footerCate.name }}
                             </a>
@@ -16,13 +16,13 @@
                     </div>
                 </div>
 
-                <div class="d-flex flex-wrap mb-2" >
-                    <div class="caption">
-                        <span class="d-block">
+                <div class="d-flex flex-wrap mb-2" style="margin-top: -2px;">
+                    <div class="caption" style="line-height: 1.4;">
+                        <span class="d-block" style="margin-left: 5px; margin-right: 12px;">
                             <span 
                                 v-for="(cate, index) in footerCate.cates" 
                                 :key="index" 
-                                class="grey--text lighten-2 font-weight-light"
+                                class="grey--text lighten-2 font-weight-light text-capitalize"
                             >
                                 <v-hover v-slot="{ hover }">
                                     <a 
@@ -49,114 +49,80 @@ export default {
     data() {
         return {
             footerCategories: [
-                {   name: 'THỜI TRANG NAM', 
+                {   name: 'Mẹ & Bé', 
                     cates: [
-                        { catName: 'Áo Khoác' },
-                        { catName: 'Áo Vest và Blazer' },
-                        { catName: 'Áo Hoodie, Áo Len & Áo Nỉ' },
-                        { catName: 'Quần Jeans' },
+                        { catName: 'Đồ dùng du lịch cho bé' },
+                        { catName: 'Đồ dùng ăn dặm cho bé' },
+                        { catName: 'Phụ kiện cho mẹ' },
+                        { catName: 'Chăm sóc sức khỏe mẹ' },
                         { catName: 'Quần Dài/Quần Âu' },
-                        { catName: 'Quần Short ' },
-                        { catName: 'Áo' },
-                        { catName: 'Áo Ba Lỗ' },
-                        { catName: 'Đồ Lót' },
-                        { catName: 'Đồ Ngủ' },
-                        { catName: 'Đồ Bộ' },
-                        { catName: 'Vớ/Tất' },
-                        { catName: 'Trang Phục Truyền Thống' },
-                        { catName: 'Đồ Hóa Trang' },
-                        { catName: 'Trang Phục Ngành Nghề' },
+                        { catName: 'Đồ dùng phòng tắm & Chăm sóc cơ thể bé' },
+                        { catName: 'Đồ dùng phòng ngủ cho bé' },
+                        { catName: 'An toàn cho bé' },
+                        { catName: 'Thực phẩm cho bé' },
+                        { catName: 'Chăm sóc sức khỏe bé' },
+                        { catName: 'Tã & bô em bé' },
+                        { catName: 'Đồ chơi' },
+                        { catName: 'Bộ & Gói quà tặng' },
                         { catName: 'Khác' },
-                        { catName: 'Trang Sức Nam' },
-                        { catName: 'Kính Mắt Nam' },
-                        { catName: 'Thắt Lưng Nam' },
-                        { catName: 'Cà vạt & Nơ cổ' },
-                        { catName: 'Phụ Kiện Nam' },
-                        
+                        { catName: 'Sữa công thức trên 24 tháng' },
+                        { catName: 'Sữa công thức 0-24 tháng tuổi' },
                     ]
                 },
-                {   name: 'NHÀ CỬA & ĐỜI SỐNG', 
+                {   name: 'Máy Ảnh & Máy Quay Phim', 
                     cates: [
-                        { catName: 'Chăn, Ga, Gối & Nệm' },
-                        { catName: 'Đồ nội thất' },
-                        { catName: 'Trang trí nhà cửa' },
-                        { catName: 'Dụng cụ & Thiết bị tiện ích' },
-                        { catName: 'Đồ dùng nhà bếp và hộp đựng thực phẩm' },
-                        { catName: 'Đèn' },
-                        { catName: 'Ngoài trời & Sân vườn' },
-                        { catName: 'Đồ dùng phòng tắm' },
-                        { catName: 'Vật phẩm thờ cúng' },
-                        { catName: 'Đồ trang trí tiệc' },
-                        { catName: 'Chăm sóc nhà cửa và giặt ủi' },
-                        { catName: 'Sắp xếp nhà cửa' },
-                        { catName: 'Dụng cụ pha chế' },
-                        { catName: 'Tinh dầu thơm phòng' },
-                        { catName: 'Đồ dùng phòng ăn' },
+                        { catName: 'Máy ảnh - Máy quay phim' },
+                        { catName: 'Camera giám sát & Camera hệ thống' },
+                        { catName: 'Thẻ nhớ' },
+                        { catName: 'Ống kính' },
+                        { catName: 'Phụ kiện máy ảnh' },
+                        { catName: 'Máy bay camera & Phụ kiện' },
                     ]
                 },
-                {   name: 'ĐỒNG HỒ', 
+                {   name: 'Túi Ví Nữ', 
                     cates: [
-                        { catName: 'Đồng Hồ Nam' },
-                        { catName: 'Đồng Hồ Nữ' },
-                        { catName: 'Bộ Đồng Hồ & Đồng Hồ Cặp' },
-                        { catName: 'Đồng Hồ Trẻ Em' },
-                        { catName: 'Phụ Kiện Đồng Hồ' },
+                        { catName: 'Ba Lô Nữ' },
+                        { catName: 'Cặp Laptop' },
+                        { catName: 'Ví Dự Tiệc & Ví Cầm Tay' },
+                        { catName: 'Túi Đeo Hông & Túi Đeo Ngực' },
+                        { catName: 'Túi Tote' },
+                        { catName: 'Túi Quai Xách' },
+                        { catName: 'Túi Đeo Chéo & Túi Đeo Vai' },
+                        { catName: 'Ví/Bóp Nữ' },
+                        { catName: 'Phụ Kiện Túi' },
                         { catName: 'Khác' },
                     ]
                 },
-                {   name: 'PHỤ KIỆN & TRANG SỨC NỮ', 
+                {   name: 'Ô Tô & Xe Máy & Xe Đạp', 
                     cates: [
-                        { catName: 'Nhẫn' },
-                        { catName: 'Bông tai' },
-                        { catName: 'Khăn choàng' },
-                        { catName: 'Găng tay' },
-                        { catName: 'Phụ kiện tóc' },
-                        { catName: 'Vòng tay & Lắc tay' },
-                        { catName: 'Lắc chân' },
-                        { catName: 'Mũ' },
-                        { catName: 'Dây chuyền' },
-                        { catName: 'Kính mắt' },
-                        { catName: 'Kim loại quý' },
-                        { catName: 'Thắt lưng' },
-                        { catName: 'Cà vạt & Nơ cổ' },
-                        { catName: 'Phụ kiện thêm' },
-                        { catName: 'Bộ phụ kiện' },
-                        { catName: 'Khác' },
-                        { catName: 'Vớ/Tất' },
-                        { catName: 'Ô/Dù' },
+                        { catName: 'Xe đạp, xe điện' },
+                        { catName: 'Mô tô, xe máy' },
+                        { catName: 'Xe Ô tô' },
+                        { catName: 'Mũ bảo hiểm' },
+                        { catName: 'Phụ kiện xe máy' },
+                        { catName: 'Phụ kiện xe đạp' },
+                        { catName: 'Phụ kiện bên trong ô tô' },
+                        { catName: 'Dầu nhớt & dầu nhờn' },
+                        { catName: 'Phụ tùng ô tô' },
+                        { catName: 'Phụ tùng xe máy' },
+                        { catName: 'Phụ kiện bên ngoài ô tô' },
+                        { catName: 'Chăm sóc ô tô' },
+                        { catName: 'Dịch vụ cho xe' },
                     ]
                 },
-                {   name: 'BALO & TÚI VÍ NAM', 
+                {   name: 'Giặt Giũ & Chăm Sóc Nhà Cửa', 
                     cates: [
-                        { catName: 'Ba Lô Nam' },
-                        { catName: 'Ba Lô Laptop Nam' },
-                        { catName: 'Túi & Cặp Đựng Laptop' },
-                        { catName: 'Túi Chống Sốc Laptop Nam' },
-                        { catName: 'Túi Tote Nam' },
-                        { catName: 'Cặp Xách Công Sở Nam' },
-                        { catName: 'Ví Cầm Tay Nam' },
-                        { catName: 'Túi Đeo Hông & Túi Đeo Ngực Nam' },
-                        { catName: 'Túi Đeo Chéo Nam' },
-                        { catName: 'Bóp/Ví Nam' },
-                        { catName: 'Khác' },
+                        { catName: 'Giặt giũ & Chăm sóc nhà cửa' },
+                        { catName: 'Giấy vệ sinh, khăn giấy' },
+                        { catName: 'Vệ sinh nhà cửa' },
+                        { catName: 'Vệ sinh bát đĩa' },
+                        { catName: 'Dụng cụ vệ sinh' },
+                        { catName: 'Chất khử mùi, làm thơm' },
+                        { catName: 'Thuốc diệt côn trùng' },
+                        { catName: 'Túi, màng bọc thực phẩm' },
+                        { catName: 'Bao bì, túi đựng rác' },
                     ]
                 },
-                {   name: 'VOUCHER & DỊCH VỤ', 
-                    cates: [
-                        { catName: 'Nhà hàng & Ăn uống' },
-                        { catName: 'Sự kiện & Giải trí' },
-                        { catName: 'Nạp tiền tài khoản' },
-                        { catName: 'Sức khỏe & Làm đẹp' },
-                        { catName: 'Gọi xe' },
-                        { catName: 'Khóa học' },
-                        { catName: 'Du lịch & Khách sạn' },
-                        { catName: 'Mua sắm' },
-                        { catName: 'Mã quà tặng Shopee' },
-                        { catName: 'Thanh toán hóa đơn' },
-                        { catName: 'Dịch vụ khác' },
-                    ]
-                },
-                
             ]
         }
     }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="header__navbar d-flex justify-space-between" style="height:34px">
+        <v-sheet class="header__navbar d-flex justify-space-between" height="34px" color="transparent">
             <v-list class="pa-0" color="transparent">
                 <v-list-item class="pa-0 mt-n2" >
                     <v-list-item-content class="pa-0 ">
@@ -312,7 +312,7 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
-        </nav>
+        </v-sheet>
     </div>
 </template>
 

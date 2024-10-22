@@ -1,14 +1,14 @@
 <template>
     <div>
-        <div class="pa-1">
+        <div>
             <div v-for="(footerCate, index) in footerCategories" :key="index"> 
                 <div>
-                    <div style="margin: 10px 0 2px 0; padding: 2px 0">
+                    <div style="margin: 7px 0px 0px 5px; padding: 2px 0">
                         <v-hover v-slot="{ hover }">
                             <a
                                 :class="hover ? 'shopeecolor--text' : 'grey--text darken-4'"
                                 href="" 
-                                class="caption text-decoration-none font-weight-bold "
+                                class="caption text-decoration-none font-weight-bold text-uppercase"
                             >
                                 {{ footerCate.name }}
                             </a>
@@ -16,13 +16,13 @@
                     </div>
                 </div>
 
-                <div class="d-flex flex-wrap mb-2" >
-                    <div class="caption">
-                        <span class="d-block">
+                <div class="d-flex flex-wrap mb-2" style="margin-top: -2px;">
+                    <div class="caption" style="line-height: 1.4">
+                        <span class="d-block" style="margin-left: 5px; margin-right: 12px">
                             <span 
                                 v-for="(cate, index) in footerCate.cates" 
                                 :key="index" 
-                                class="grey--text lighten-2 font-weight-light"
+                                class="grey--text lighten-2 font-weight-light text-capitalize"
                             >
                                 <v-hover v-slot="{ hover }">
                                     <a 
@@ -49,7 +49,7 @@ export default {
     data() {
         return {
             footerCategories: [
-                {   name: 'THỜI TRANG NAM', 
+                {   name: 'Thời Trang Nam', 
                     cates: [
                         { catName: 'Áo Khoác' },
                         { catName: 'Áo Vest và Blazer' },
@@ -75,7 +75,7 @@ export default {
                         
                     ]
                 },
-                {   name: 'NHÀ CỬA & ĐỜI SỐNG', 
+                {   name: 'Nhà Cửa & Đời Sống', 
                     cates: [
                         { catName: 'Chăn, Ga, Gối & Nệm' },
                         { catName: 'Đồ nội thất' },
@@ -94,7 +94,7 @@ export default {
                         { catName: 'Đồ dùng phòng ăn' },
                     ]
                 },
-                {   name: 'ĐỒNG HỒ', 
+                {   name: 'Đồng Hồ', 
                     cates: [
                         { catName: 'Đồng Hồ Nam' },
                         { catName: 'Đồng Hồ Nữ' },
@@ -104,7 +104,7 @@ export default {
                         { catName: 'Khác' },
                     ]
                 },
-                {   name: 'PHỤ KIỆN & TRANG SỨC NỮ', 
+                {   name: 'Phụ Kiện & Trang Sức Nữ', 
                     cates: [
                         { catName: 'Nhẫn' },
                         { catName: 'Bông tai' },
@@ -126,7 +126,7 @@ export default {
                         { catName: 'Ô/Dù' },
                     ]
                 },
-                {   name: 'BALO & TÚI VÍ NAM', 
+                {   name: 'Balo & Túi Ví Nam', 
                     cates: [
                         { catName: 'Ba Lô Nam' },
                         { catName: 'Ba Lô Laptop Nam' },

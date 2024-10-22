@@ -2,7 +2,7 @@
     <div>
         <v-sheet class="mt-15 mb-8 pb-15">
             <div class="subtitle-2 grey--text darken-2">Danh Mục</div>
-            <div class="row " style="margin: -10px -5px 0 -5px;">
+            <div class="row" style="margin: -10px -5px 0 -5px;">
                 <!-- Categories Column 1 -->
                 <footerCategoriesCol1 class="grid-column-2-4"></footerCategoriesCol1>
                 <!-- Categories Column 2 -->
