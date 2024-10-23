@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-sheet color="white" style="margin-top: 120px">
+        <v-sheet color="white" style="margin-top: 120px" elevation="2">
             <div class="grid">
                 <div class="d-flex pt-7 pb-3 flex-column" >
                     <v-sheet class="flex-grow-1 d-flex" color="transparent" max-width="100%">
@@ -87,7 +87,7 @@
                                                     >
                                                     </v-img>
                                                 </div>
-                                                <div style="line-height: 1; font-size: 14px;">
+                                                <div style="line-height: 1; font-size: 14px; width: 60%;">
                                                     {{ service.name }}
                                                 </div>
                                             </a>
@@ -131,8 +131,14 @@ export default {
                 {   name: "Voucher Giảm Đến 1 Triệu", 
                     src: "https://cf.shopee.vn/file/vn-50009109-f6c34d719c3e4d33857371458e7a7059_xhdpi"
                 },
-                {   name: "Miễn Hết Phí Ship Cho Mọi Đơn",
-                    src: "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi" 
+                {   name: "Miễn Phí Ship - Có Shopee",
+                    src: "https://cf.shopee.vn/file/vn-50009109-c7a2e1ae720f9704f92f72c9ef1a494a_xhdpi" 
+                },
+                {   name: "Khung Giờ Săn Sale", 
+                    src: "https://cf.shopee.vn/file/e4a404283b3824c211c1549aedd28d5f_xhdpi"
+                },
+                {   name: "Mã Giảm Giá", 
+                    src: "https://cf.shopee.vn/file/vn-50009109-8a387d78a7ad954ec489d3ef9abd60b4_xhdpi"
                 },
                 {   name: "Shopee Siêu Rẻ", 
                     src: "https://cf.shopee.vn/file/vn-50009109-91399a1d3ed283d272b069fac5ca989c_xhdpi"
@@ -140,14 +146,11 @@ export default {
                 {   name: "Shopee Style Voucher 30%", 
                     src: "https://cf.shopee.vn/file/vn-50009109-c02353c969d19918c53deaa4ea15bdbe_xhdpi"
                 },
-                {   name: "Hàng Quốc Tế", 
-                    src: "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi"
+                {   name: "Quốc Tế Siêu Trợ Giá", 
+                    src: "https://cf.shopee.vn/file/vn-11134258-7ras8-m0vja5rfwyvj10_xhdpi"
                 },
                 {   name: "Nạp Thẻ, Dịch Vụ & Vé Phim", 
                     src: "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi"
-                },
-                {   name: "Mã Giảm Giá", 
-                    src: "https://cf.shopee.vn/file/vn-50009109-8a387d78a7ad954ec489d3ef9abd60b4_xhdpi"
                 },
             ],
         }
