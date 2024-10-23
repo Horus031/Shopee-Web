@@ -2,7 +2,7 @@
     <div>
         <v-sheet color="white" style="margin-top: 120px" elevation="2">
             <div class="grid">
-                <div class="d-flex pt-7 pb-3 flex-column" >
+                <div class="d-flex pt-7 flex-column">
                     <v-sheet class="flex-grow-1 d-flex" color="transparent" max-width="100%">
                         <v-carousel  
                             class="flex-grow-1 d-flex justify-center" 
@@ -73,7 +73,7 @@
                     <v-sheet>
                         <v-list class="pa-0">
                             <v-list-item class="pa-0 d-flex flex-nowrap justify-space-around">
-                                <v-list-item-content v-for="(service, index) in services" :key="index" style="padding-top: 10px;">
+                                <v-list-item-content v-for="(service, index) in services" :key="index" style="padding-top: 10px;" class="pb-0">
                                     <v-list-item-title class="d-flex justify-center align-center pa-0" style="width: auto;">
                                         <v-sheet  width="150px" min-height="108px" color="transparent" class="d-flex justify-center text-center"> <!--This to set the width-->
                                             <a href="" class="d-flex align-center flex-column text-decoration-none black--text text-wrap" style="width: 100%">
