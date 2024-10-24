@@ -5,10 +5,10 @@
                 <div class="d-flex pt-7 flex-column">
                     <v-sheet class="flex-grow-1 d-flex" color="transparent" max-width="100%">
                         <v-carousel  
-                            class="flex-grow-1 d-flex justify-center" 
+                            class="flex-grow-1 d-flex"
                             cycle
                             width="auto"
-                            height="235"
+                            height="238"
                             hide-delimiter-background
                             show-arrows-on-hover
                         >
@@ -38,7 +38,7 @@
                                 </v-btn>
                             </template>
                             <v-carousel-item v-for="(step, index) in steps" :key="index">
-                                <v-img :src="step.src" max-width="796px" height="235px" ></v-img>
+                                <v-img :src="step.src" max-width="796px" min-height="238px" position=""></v-img>
                             </v-carousel-item>
                         </v-carousel>
                         
@@ -48,8 +48,8 @@
                                     <v-img
                                     src="https://cf.shopee.vn/file/sg-11134258-7rdxi-m16tffq32hr261_xhdpi"
                                     max-height="115px"
-                                    width="388px"
-                                    contain
+                                    width="398px"
+                                    sizes="cover"
                                     
                                     ></v-img>
                                 </a>
@@ -60,8 +60,8 @@
                                     <v-img
                                     src="https://cf.shopee.vn/file/sg-11134258-7rdx2-m16tfhqs446155_xhdpi"
                                     max-height="115px"
-                                    width="388px"
-                                    contain
+                                    width="398px"
+                                    sizes="cover"
                                     >
                                     </v-img>
                                 </a>

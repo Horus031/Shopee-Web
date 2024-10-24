@@ -1,11 +1,11 @@
 <template>
-    <v-sheet color="grey lighten-4 pt-5" >
-        <v-card class="grid" flat tile style="border-bottom: 1px solid #f5f5f5;">
+    <div class="grid pt-5">
+        <v-card flat tile style="border-bottom: 1px solid #f5f5f5;">
             <v-card-title>
                 <h5 class="font-weight-light">DANH MỤC</h5>
             </v-card-title>
         </v-card>
-        <v-card class="grid overflow-x-auto" rounded="sm" tile flat>
+        <v-card class="overflow-x-auto" rounded="sm" tile flat>
             <v-sheet color="transparent d-flex flex-wrap" max-height="312px" width="142%"> 
                 <v-card tile class="d-flex flex-wrap align-center" color="transparent">
                     <v-hover v-for="(category, index) in categories" :key="index" v-slot="{ hover }" >
@@ -27,7 +27,7 @@
                 </v-card>
             </v-sheet>
         </v-card>
-    </v-sheet>
+    </div>
 </template>
 
 <script>

@@ -7,8 +7,8 @@
                         <v-list-item-title class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
-                                style="font-size: 13px;" 
-                                class="text-decoration-none pa-2"
+                                style="font-size: 13px; padding: 8px 10px 8px 4px;" 
+                                class="text-decoration-none"
                                 :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                             >
                                 Kênh Người Bán
@@ -20,8 +20,8 @@
                         <v-list-item-title class="header__navbar-item header__navbar-item--separator">
                             <v-hover v-slot="{ hover }">
                                 <a href="" 
-                                style="font-size: 13px;" 
-                                class="text-decoration-none pa-2"
+                                style="font-size: 13px; padding: 8px 10px 8px 8px" 
+                                class="text-decoration-none"
                                 :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                             >
                                 Trở thành Người bán Shopee
@@ -40,8 +40,8 @@
                                     <v-hover v-slot="{ hover }">
                                         <a
                                             href=""
-                                            style="font-size: 13px; position:relative;"
-                                            class="text-decoration-none pa-2 d-inline-block"
+                                            style="font-size: 13px; position:relative; padding: 9px 8px 8px 8px"
+                                            class="text-decoration-none d-inline-block"
                                             :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                             v-bind="attrs"
                                             v-on="on"
@@ -108,9 +108,8 @@
                     <v-list-item-content class="pa-0" >
                         <v-list-item-title class="header__navbar-item">
                             <span 
-                                class="text-decoration-none py-2 pl-2"
-                                style="font-size: 13px; 
-                                color: white;" 
+                                class="text-decoration-none py-2"
+                                style="font-size: 13px; color: white; padding-left: 10px;" 
                             >
                                 Kết nối
                             </span>
@@ -146,15 +145,15 @@
                                     <v-hover v-slot="{ hover }">
                                         <a 
                                             href="" 
-                                            class="text-decoration-none white--text d-flex align-center pa-2"
-                                            style="font-size: 13px;"
+                                            class="text-decoration-none white--text d-flex align-center"
+                                            style="font-size: 13px; padding: 10px 0px 8px 8px"
                                             :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
                                             v-bind="attrs"
                                             v-on="on"
                                         >
                                             <svg 
                                                 style="width: 18px; 
-                                                height: 18px;" 
+                                                height: 18px; margin-right: 1px;" 
                                                 viewBox="3 2.5 14 14" x="0" y="0" 
                                                 class="pr-1"
                                             >
@@ -162,7 +161,7 @@
                                                 <path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path>
                                             </svg>  
                                         
-                                            <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Thông báo</span>
+                                            <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Thông Báo</span>
                                         </a>
                                     </v-hover>
                                 </template>
@@ -213,15 +212,15 @@
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0 ">
-                        <v-list-item-title class="header__navbar-item d-flex align-center pa-2">
+                        <v-list-item-title class="header__navbar-item d-flex align-center">
                             <v-hover v-slot="{ hover }">
                                 <a 
                                     href="" 
                                     class="text-decoration-none white--text d-flex align-center"
-                                    style="font-size: 13px;"
+                                    style="font-size: 13px; padding: 10px 12px 8px 8px"
                                     :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'"
                                 >
-                                    <svg height="22" viewBox="0 0 16 16" width="22" class="shopee-svg-icon icon-help-center pr-1">
+                                    <svg height="22" viewBox="0 0 16 16" width="22" class="pr-1" style="margin-right: 1px">
                                         <g fill="none" fill-rule="evenodd" transform="translate(1)">
                                             <circle :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff'" cx="7" cy="8" r="7" stroke="currentColor"></circle>
                                             <path :style="hover ? 'fill:#ffffffb3' : 'fill:#fff'" fill="currentColor" d="m6.871 3.992c-.814 0-1.452.231-1.914.704-.462.462-.693 1.089-.693 1.892h1.155c0-.484.099-.858.297-1.122.22-.319.583-.473 1.078-.473.396 0 .715.11.935.33.209.22.319.517.319.902 0 .286-.11.55-.308.803l-.187.209c-.682.605-1.1 1.056-1.243 1.364-.154.286-.22.638-.22 1.045v.187h1.177v-.187c0-.264.055-.506.176-.726.099-.198.253-.396.462-.572.517-.451.825-.737.924-.858.275-.352.418-.803.418-1.342 0-.66-.22-1.188-.66-1.573-.44-.396-1.012-.583-1.716-.583zm-.198 6.435c-.22 0-.418.066-.572.22-.154.143-.231.33-.231.561 0 .22.077.407.231.561s.352.231.572.231.418-.077.572-.22c.154-.154.242-.341.242-.572s-.077-.418-.231-.561c-.154-.154-.352-.22-.583-.22z">
@@ -229,13 +228,13 @@
                                         </g>
                                     </svg>
                                     
-                                    <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'"  >Hỗ trợ</span>
+                                    <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'"  >Hỗ Trợ</span>
                                 </a>
                             </v-hover>
                         </v-list-item-title>
                     </v-list-item-content>
                     <v-list-item-content class="pa-0" >
-                        <v-list-item-title class="header__navbar-item d-flex align-center pa-2">
+                        <v-list-item-title class="header__navbar-item d-flex align-center">
                                 <v-menu
                                     transition="scale-transition"
                                     open-on-hover
@@ -249,12 +248,12 @@
                                             <a 
                                                 href="" 
                                                 class="text-decoration-none d-flex align-center"
-                                                style="font-size: 13px;"
+                                                style="font-size: 13px; padding: 10px 14px 8px 8px"
                                                 v-bind="attrs"
                                                 v-on="on"
                                                 
                                             >
-                                                <svg class="pr-1" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <svg class="pr-1" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 1px">
                                                     <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                                     <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M5.33464 8.00004C5.33464 11.6819 6.52854 14.6667 8.0013 14.6667C9.47406 14.6667 10.668 11.6819 10.668 8.00004C10.668 4.31814 9.47406 1.33337 8.0013 1.33337C6.52854 1.33337 5.33464 4.31814 5.33464 8.00004Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                                     <path :style="hover ? 'stroke:#ffffffb3' : 'stroke:#fff' " d="M1.33398 8H14.6673" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -262,7 +261,8 @@
                                             
                                                 <span :style="hover ? 'color:#ffffffb3' : 'color:#fff'">Tiếng Việt</span>
 
-                                                <v-icon dense :color="hover ? '#ffffffb3' : '#fff'">mdi mdi-chevron-down</v-icon>
+
+                                                <svg viewBox="0 0 12 12" fill="none" width="12" height="12" color="currentColor" :style="hover ? 'color: #ffffffb3' : 'color: #fff'" style="margin-right: -2px; margin-left: 5px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 8.146L11.146 3l.707.707-5.146 5.147a1 1 0 01-1.414 0L.146 3.707.854 3 6 8.146z" fill="currentColor"></path></svg>
                                             </a>
                                         </v-hover>
                                     </template>
@@ -286,8 +286,8 @@
                                 <RouterLink 
                                     to="./signup"
                                     href="" 
-                                    style="font-size: 13px;" 
-                                    class="text-decoration-none pa-2 header__navbar-item--separator"
+                                    style="font-size: 13px; padding: 10px 10px 8px 8px;" 
+                                    class="text-decoration-none header__navbar-item--separator"
                                     :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                 >
                                     Đăng Ký
@@ -301,8 +301,8 @@
                                 <RouterLink 
                                     to="/login"
                                     href="" 
-                                    style="font-size: 13px;" 
-                                    class="text-decoration-none pa-2"
+                                    style="font-size: 13px; padding: 10px 10px 8px 11px" 
+                                    class="text-decoration-none"
                                     :style="hover ? 'color:#ffffffb3' : 'color:#fff'"
                                 >
                                     Đăng Nhập

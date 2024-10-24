@@ -2,8 +2,8 @@
     <!-- Header with search -->
     <div>
         <v-sheet color="transparent" height="86px">
-            <div class="pt-3 pb-2 d-flex">
-                <a href="" class="pr-10">
+            <div class="pb-2 d-flex" style="padding-top: 13px;margin-left: -3px">
+                <a href="" class="pr-12">
                     <div style="padding: 2px; margin: -2px" class="ml-2">
                         <svg 
                             fill="white" 
@@ -18,11 +18,12 @@
                 </a>
 
                 <div class="flex-grow-1 mt-1 column justify-start flex-wrap" style="position: relative">
-                    <v-form class="d-flex py-1 flex-grow-1">
+                    <v-form class="d-flex py-1 flex-grow-1 mt-n1">
                         <v-text-field
                             style="position: relative; border-radius: 2px;"
                             solo
                             dense
+                            flat
                             placeholder="Shopee bao ship 0Đ - Đăng ký ngay!"
                             class="d-flex align-center pb-0 mb-0"
                             
@@ -33,7 +34,7 @@
                             depressed
                             width="60px"
                             height="34px"
-                            style="right:2px; top: 6px;"
+                            style="right:2px; top: 2px;"
                             color="#fc5533"
                             absolute
                         >
@@ -120,5 +121,11 @@ export default {
 <style scoped>
 ::v-deep .v-input__control {
     height: 40px !important;
+}
+
+::v-deep input#input-37 {
+    padding: 0;
+    font-size: 14px;
+    color: #333
 }
 </style>

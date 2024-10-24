@@ -1,14 +1,16 @@
 <template>
-    <div>
+    <v-sheet>
         <!-- Product Advertisements -->
         <bodyProductAds></bodyProductAds>
 
-        <!-- Free Advertisement -->
-         <bodyFreeAds></bodyFreeAds>
+        <v-sheet color="grey lighten-4">
+            <!-- Free Advertisement -->
+            <bodyFreeAds></bodyFreeAds>
 
-        <!-- Product Categories -->
-        <bodyProductCategory></bodyProductCategory>
-    </div>
+            <!-- Product Categories -->
+            <bodyProductCategory></bodyProductCategory>
+        </v-sheet>
+    </v-sheet>
 </template>
 
 <script>
@@ -34,5 +36,5 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 </style>
