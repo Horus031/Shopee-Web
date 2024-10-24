@@ -14,6 +14,10 @@
 
         <!-- Third Footer -->
         <thirdFooterIndex></thirdFooterIndex>
+
+        <!-- Chat Box -->
+        <chatBox></chatBox>
+
     </v-app>
 </template>
 
@@ -23,6 +27,7 @@ import bodyIndex from '../components/body/bodyIndex.vue';
 import firstFooterIndex from '../components/firstfooter/firstFooterIndex.vue';
 import secondFooterIndex from '../components/secondfooter/secondFooterIndex.vue';
 import thirdFooterIndex from '../components/thirdfooter/thirdFooterIndex.vue';
+import chatBox from '../components/chatBox.vue';
 
   export default {
     components: {
@@ -31,6 +36,7 @@ import thirdFooterIndex from '../components/thirdfooter/thirdFooterIndex.vue';
         firstFooterIndex,
         secondFooterIndex,
         thirdFooterIndex,
+        chatBox,
     },
     
 }
